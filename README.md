@@ -22,6 +22,7 @@ Watch the repository (Watch, then Custom, then Releases) to be told when it ship
 
 - Website: [imbox.lol](https://imbox.lol)
 - Documentation: [imbox.lol/docs](https://imbox.lol/docs)
+- Read the letter: [LETTER.md](LETTER.md), or on the website at [imbox.lol/letter](https://imbox.lol/letter)
 
 ## License
 
