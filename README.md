@@ -6,6 +6,12 @@ Imbox reads your Gmail, your Outlook and any other mailbox, and puts all of it b
 
 It runs on your own server, has one owner, and has a separate layout for phones.
 
+## See it
+
+The Imbox, where mail from people lands, with what is waiting for your reply at the top:
+
+![The Imbox](docs/screenshots/imbox.png)
+
 ## Status
 
 The first release, **0.1.0**, is planned for **1 November 2026**. The source code, the Docker image and the release notes will be published here on that day. Until then this page is all there is.
