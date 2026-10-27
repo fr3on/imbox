@@ -29,7 +29,8 @@
         "noImportantStyles": "off"
       },
       "correctness": {
-        "useExhaustiveDependencies": "warn"
+        "useExhaustiveDependencies": "warn",
+        "noComponentHookFactories": "warn"
       },
       "a11y": {
         "useSemanticElements": "warn",
