@@ -1,10 +1,12 @@
 name: CI
 
-# Pushes to main are tested by the deploy workflow, so this one runs for pull requests, and for a release (workflow_call).
+# Runs for pull requests, for pushes to main (the Docker image workflow follows it), and for a release (workflow_call).
 # Dependabot's pull requests are skipped (each job has the same `if`). A skipped job counts as passed for branch protection, and the update is
-# tested by the deploy workflow once it is merged to main.
+# tested here once it is merged to main.
 on:
   pull_request:
+  push:
+    branches: [main]
   # The release workflow runs the same checks on the tagged commit.
   workflow_call:
 
