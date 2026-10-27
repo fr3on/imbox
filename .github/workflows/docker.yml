@@ -1,11 +1,11 @@
-# Publishes the self-hosted image to ghcr.io/fr3on/imbox as :edge (the newest main) and :sha-... after the deploy workflow's tests pass on main, or by hand.
+# Publishes the self-hosted image to ghcr.io/fr3on/imbox as :edge (the newest main) and :sha-... after the CI workflow passes on main, or by hand.
 # Version tags (1.2.3, 1.2, latest) are published by the release workflow, after its own checks.
 # Pushes to the GitHub Container Registry with the workflow's own token; no secret to add.
 name: Docker image
 
 on:
   workflow_run:
-    workflows: ["Deploy (self-hosted)"]
+    workflows: ["CI"]
     types: [completed]
     branches: [main]
   workflow_dispatch:
