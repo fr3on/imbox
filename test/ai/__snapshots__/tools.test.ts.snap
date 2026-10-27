@@ -1,0 +1,3504 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`changing mail > acts on one thread > {"action":"bubble_up","at":1893456000000} 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "action": "bubble_up",
+    "ok": true,
+    "thread_id": "t-1",
+  },
+  "summary": "Bubbles up <local> · “Mail of ua”",
+}
+`;
+
+exports[`changing mail > acts on one thread > {"action":"bubble_up"} 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "action": "bubble_up",
+    "ok": true,
+    "thread_id": "t-1",
+  },
+  "summary": "Bubble up cancelled · “Mail of ua”",
+}
+`;
+
+exports[`changing mail > acts on one thread > {"action":"bundle","on":false} 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "action": "bundle",
+    "ok": true,
+    "thread_id": "t-1",
+  },
+  "summary": "Sender unbundled · “Mail of ua”",
+}
+`;
+
+exports[`changing mail > acts on one thread > {"action":"dance"} 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "Unknown action",
+  },
+  "summary": "Unknown action",
+}
+`;
+
+exports[`changing mail > acts on one thread > {"action":"label_add","label_id":"<label>"} 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "action": "label_add",
+    "ok": true,
+    "thread_id": "t-1",
+  },
+  "summary": "Label added · “Mail of ua”",
+}
+`;
+
+exports[`changing mail > acts on one thread > {"action":"label_add"} 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "label_id required",
+  },
+  "summary": "label_id required",
+}
+`;
+
+exports[`changing mail > acts on one thread > {"action":"label_remove","label_id":"<label>"} 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "action": "label_remove",
+    "ok": true,
+    "thread_id": "t-1",
+  },
+  "summary": "Label removed · “Mail of ua”",
+}
+`;
+
+exports[`changing mail > acts on one thread > {"action":"mark_read"} 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "action": "mark_read",
+    "ok": true,
+    "thread_id": "t-1",
+  },
+  "summary": "Marked read · “Mail of ua”",
+}
+`;
+
+exports[`changing mail > acts on one thread > {"action":"mark_unread"} 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "action": "mark_unread",
+    "ok": true,
+    "thread_id": "t-1",
+  },
+  "summary": "Marked unread · “Mail of ua”",
+}
+`;
+
+exports[`changing mail > acts on one thread > {"action":"move","bucket":"feed"} 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "action": "move",
+    "ok": true,
+    "thread_id": "t-1",
+  },
+  "summary": "Moved to Feed · “Mail of ua”",
+}
+`;
+
+exports[`changing mail > acts on one thread > {"action":"move","bucket":"nowhere"} 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "bucket must be imbox, feed, paper_trail or trash",
+  },
+  "summary": "bucket must be imbox, feed, paper_trail or trash",
+}
+`;
+
+exports[`changing mail > acts on one thread > {"action":"reply_later","on":false} 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "action": "reply_later",
+    "ok": true,
+    "thread_id": "t-1",
+  },
+  "summary": "Removed from Reply Later · “Mail of ua”",
+}
+`;
+
+exports[`changing mail > acts on one thread > {"action":"reply_later"} 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "action": "reply_later",
+    "ok": true,
+    "thread_id": "t-1",
+  },
+  "summary": "Added to Reply Later · “Mail of ua”",
+}
+`;
+
+exports[`changing mail > acts on one thread > {"action":"set_aside","on":true} 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "action": "set_aside",
+    "ok": true,
+    "thread_id": "t-1",
+  },
+  "summary": "Set aside · “Mail of ua”",
+}
+`;
+
+exports[`changing mail > acts on one thread > {"action":"unsubscribe_info"} 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "found": false,
+  },
+  "summary": "No unsubscribe link in this thread",
+}
+`;
+
+exports[`changing mail > acts on one thread > missing 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "Thread not found",
+  },
+  "summary": "Thread not found",
+}
+`;
+
+exports[`changing mail > bundles and unbundles a sender > bundle 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "contact": {
+      "bundled": true,
+      "email": "sender@example.com",
+      "id": "c-4",
+      "name": "Sender",
+      "scope": "all",
+    },
+    "ok": true,
+  },
+  "summary": "Bundled senders from Sender",
+}
+`;
+
+exports[`changing mail > bundles and unbundles a sender > missing 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "contact": {
+      "bundled": true,
+      "email": "nobody@example.com",
+      "id": "<uuid>",
+      "name": "",
+      "scope": "all",
+    },
+    "ok": true,
+  },
+  "summary": "Bundled senders from nobody@example.com",
+}
+`;
+
+exports[`changing mail > bundles and unbundles a sender > unbundle 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "contact": {
+      "bundled": false,
+      "email": "sender@example.com",
+      "id": "<uuid>",
+      "name": "Sender",
+      "scope": "account",
+    },
+    "ok": true,
+  },
+  "summary": "Unbundled senders from Sender",
+}
+`;
+
+exports[`changing mail > reads an unsubscribe link from a message header 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "found": true,
+    "mailto": "stop@example.org",
+    "url": "https://example.org/u?x=1",
+  },
+  "summary": "Found the unsubscribe link",
+}
+`;
+
+exports[`changing mail > screens a sender in or out > bad decision 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "Bad decision",
+  },
+  "summary": "Bad decision",
+}
+`;
+
+exports[`changing mail > screens a sender in or out > bad destination 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "Destination must be one of: imbox, feed, paper_trail, screened_out",
+  },
+  "summary": "Destination must be one of: imbox, feed, paper_trail, screened_out",
+}
+`;
+
+exports[`changing mail > screens a sender in or out > by email 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "contact": {
+      "destination": "imbox",
+      "email": "sender@example.com",
+      "id": "<uuid>",
+      "name": "Sender",
+      "scope": "all",
+    },
+    "ok": true,
+  },
+  "summary": "Set destination for Sender to imbox",
+}
+`;
+
+exports[`changing mail > screens a sender in or out > destination 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "contact": {
+      "destination": "paper_trail",
+      "email": "sender@example.com",
+      "id": "c-4",
+      "name": "Sender",
+      "scope": "account",
+    },
+    "ok": true,
+  },
+  "summary": "Set destination for Sender to paper trail",
+}
+`;
+
+exports[`changing mail > screens a sender in or out > feed 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "contact": {
+      "account_id": "ua-imap",
+      "avatar_url": "",
+      "bundled": false,
+      "email": "sender@example.com",
+      "first_seen_at": "<ms>",
+      "id": "c-4",
+      "last_seen_at": "<ms>",
+      "message_count": 1,
+      "name": "Sender",
+      "notes": "",
+      "screen_status": "feed",
+      "screened_at": null,
+    },
+    "ok": true,
+  },
+  "summary": "Let in Sender → feed",
+}
+`;
+
+exports[`changing mail > screens a sender in or out > missing 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "Contact not found",
+  },
+  "summary": "Contact not found",
+}
+`;
+
+exports[`changing mail > screens a sender in or out > no contact 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "contact": {
+      "destination": "imbox",
+      "email": "nobody@example.com",
+      "id": "<uuid>",
+      "name": "",
+      "scope": "all",
+    },
+    "ok": true,
+  },
+  "summary": "Set destination for nobody@example.com to imbox",
+}
+`;
+
+exports[`changing many threads at once > proposes a change, applies it when confirmed, and undoes it > apply 1`] = `
+{
+  "emitted": [
+    {
+      "proposal": {
+        "action": "mark_read",
+        "applied": false,
+        "bucket": undefined,
+        "description": "Mark 2 threads as read",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-1",
+          "t-8",
+        ],
+        "threads": [
+          {
+            "from": "Sender <sender@example.com>",
+            "id": "t-1",
+            "previous_bucket": "imbox",
+            "previous_unread": true,
+            "subject": "Mail of ua",
+          },
+          {
+            "from": "Sender <news@example.org>",
+            "id": "t-8",
+            "previous_bucket": "feed",
+            "previous_unread": true,
+            "subject": "Quarterly plan",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+    {
+      "proposal": {
+        "action": "mark_read",
+        "applied": true,
+        "bucket": undefined,
+        "description": "Mark 2 threads as read",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-1",
+          "t-8",
+        ],
+        "threads": [
+          {
+            "from": "Sender <sender@example.com>",
+            "id": "t-1",
+            "previous_bucket": "imbox",
+            "previous_unread": true,
+            "subject": "Mail of ua",
+          },
+          {
+            "from": "Sender <news@example.org>",
+            "id": "t-8",
+            "previous_bucket": "feed",
+            "previous_unread": true,
+            "subject": "Quarterly plan",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+  ],
+  "result": {
+    "applied": true,
+    "count": 2,
+    "ok": true,
+    "proposal": {
+      "action": "mark_read",
+      "applied": true,
+      "description": "Mark 2 threads as read",
+      "id": "<uuid>",
+      "thread_ids": [
+        "t-1",
+        "t-8",
+      ],
+      "threads": [
+        {
+          "from": "Sender <sender@example.com>",
+          "id": "t-1",
+          "previous_bucket": "imbox",
+          "previous_unread": true,
+          "subject": "Mail of ua",
+        },
+        {
+          "from": "Sender <news@example.org>",
+          "id": "t-8",
+          "previous_bucket": "feed",
+          "previous_unread": true,
+          "subject": "Quarterly plan",
+        },
+      ],
+    },
+  },
+  "summary": "Completed: Mark 2 threads as read. An undo card has been shown to the user.",
+}
+`;
+
+exports[`changing many threads at once > proposes a change, applies it when confirmed, and undoes it > propose 1`] = `
+{
+  "emitted": [
+    {
+      "proposal": {
+        "action": "mark_read",
+        "applied": false,
+        "bucket": undefined,
+        "description": "Mark 2 threads as read",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-1",
+          "t-8",
+        ],
+        "threads": [
+          {
+            "from": "Sender <sender@example.com>",
+            "id": "t-1",
+            "previous_bucket": "imbox",
+            "previous_unread": true,
+            "subject": "Mail of ua",
+          },
+          {
+            "from": "Sender <news@example.org>",
+            "id": "t-8",
+            "previous_bucket": "feed",
+            "previous_unread": true,
+            "subject": "Quarterly plan",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+  ],
+  "result": {
+    "applied": false,
+    "count": 2,
+    "ok": true,
+    "proposal": {
+      "action": "mark_read",
+      "applied": false,
+      "description": "Mark 2 threads as read",
+      "id": "<uuid>",
+      "thread_ids": [
+        "t-1",
+        "t-8",
+      ],
+      "threads": [
+        {
+          "from": "Sender <sender@example.com>",
+          "id": "t-1",
+          "previous_bucket": "imbox",
+          "previous_unread": true,
+          "subject": "Mail of ua",
+        },
+        {
+          "from": "Sender <news@example.org>",
+          "id": "t-8",
+          "previous_bucket": "feed",
+          "previous_unread": true,
+          "subject": "Quarterly plan",
+        },
+      ],
+    },
+  },
+  "summary": "Proposed: Mark 2 threads as read? A confirmation card has been shown to the user with Apply and Undo options.",
+}
+`;
+
+exports[`changing many threads at once > proposes a change, applies it when confirmed, and undoes it > undo 1`] = `
+{
+  "emitted": [
+    {
+      "proposal": {
+        "action": "mark_read",
+        "applied": false,
+        "bucket": undefined,
+        "description": "Mark 2 threads as read",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-1",
+          "t-8",
+        ],
+        "threads": [
+          {
+            "from": "Sender <sender@example.com>",
+            "id": "t-1",
+            "previous_bucket": "imbox",
+            "previous_unread": true,
+            "subject": "Mail of ua",
+          },
+          {
+            "from": "Sender <news@example.org>",
+            "id": "t-8",
+            "previous_bucket": "feed",
+            "previous_unread": true,
+            "subject": "Quarterly plan",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+    {
+      "proposal": {
+        "action": "mark_read",
+        "applied": true,
+        "bucket": undefined,
+        "description": "Mark 2 threads as read",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-1",
+          "t-8",
+        ],
+        "threads": [
+          {
+            "from": "Sender <sender@example.com>",
+            "id": "t-1",
+            "previous_bucket": "imbox",
+            "previous_unread": true,
+            "subject": "Mail of ua",
+          },
+          {
+            "from": "Sender <news@example.org>",
+            "id": "t-8",
+            "previous_bucket": "feed",
+            "previous_unread": true,
+            "subject": "Quarterly plan",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+  ],
+  "result": {
+    "ok": true,
+    "restored_count": 1,
+    "thread_ids": [
+      "t-8",
+    ],
+  },
+  "summary": "Undone bulk action · Restored 1 thread",
+}
+`;
+
+exports[`changing many threads at once > selects threads by filter, and checks its input > bad action 1`] = `
+{
+  "emitted": [
+    {
+      "proposal": {
+        "action": "trash",
+        "applied": true,
+        "bucket": "trash",
+        "description": "Move 1 thread to trash",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-8",
+        ],
+        "threads": [
+          {
+            "from": "Sender <news@example.org>",
+            "id": "t-8",
+            "previous_bucket": "feed",
+            "previous_unread": true,
+            "subject": "Quarterly plan",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+    {
+      "proposal": {
+        "action": "move",
+        "applied": false,
+        "bucket": "imbox",
+        "description": "Move 1 thread to imbox",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-10",
+        ],
+        "threads": [
+          {
+            "from": "Sender <billing@example.org>",
+            "id": "t-10",
+            "previous_bucket": "paper_trail",
+            "previous_unread": true,
+            "subject": "Invoice 42",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+  ],
+  "isError": true,
+  "result": {
+    "error": "Invalid action. Must be one of: move, mark_read, mark_unread, reply_later, set_aside, trash",
+  },
+  "summary": "Invalid action. Must be one of: move, mark_read, mark_unread, reply_later, set_aside, trash",
+}
+`;
+
+exports[`changing many threads at once > selects threads by filter, and checks its input > bad bucket 1`] = `
+{
+  "emitted": [
+    {
+      "proposal": {
+        "action": "trash",
+        "applied": true,
+        "bucket": "trash",
+        "description": "Move 1 thread to trash",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-8",
+        ],
+        "threads": [
+          {
+            "from": "Sender <news@example.org>",
+            "id": "t-8",
+            "previous_bucket": "feed",
+            "previous_unread": true,
+            "subject": "Quarterly plan",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+    {
+      "proposal": {
+        "action": "move",
+        "applied": false,
+        "bucket": "imbox",
+        "description": "Move 1 thread to imbox",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-10",
+        ],
+        "threads": [
+          {
+            "from": "Sender <billing@example.org>",
+            "id": "t-10",
+            "previous_bucket": "paper_trail",
+            "previous_unread": true,
+            "subject": "Invoice 42",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+  ],
+  "isError": true,
+  "result": {
+    "error": "For action 'move', a valid bucket (imbox, feed, paper_trail, trash) is required",
+  },
+  "summary": "For action 'move', a valid bucket (imbox, feed, paper_trail, trash) is required",
+}
+`;
+
+exports[`changing many threads at once > selects threads by filter, and checks its input > move 1`] = `
+{
+  "emitted": [
+    {
+      "proposal": {
+        "action": "trash",
+        "applied": true,
+        "bucket": "trash",
+        "description": "Move 1 thread to trash",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-8",
+        ],
+        "threads": [
+          {
+            "from": "Sender <news@example.org>",
+            "id": "t-8",
+            "previous_bucket": "feed",
+            "previous_unread": true,
+            "subject": "Quarterly plan",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+    {
+      "proposal": {
+        "action": "move",
+        "applied": false,
+        "bucket": "imbox",
+        "description": "Move 1 thread to imbox",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-10",
+        ],
+        "threads": [
+          {
+            "from": "Sender <billing@example.org>",
+            "id": "t-10",
+            "previous_bucket": "paper_trail",
+            "previous_unread": true,
+            "subject": "Invoice 42",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+  ],
+  "result": {
+    "applied": false,
+    "count": 1,
+    "ok": true,
+    "proposal": {
+      "action": "move",
+      "applied": false,
+      "bucket": "imbox",
+      "description": "Move 1 thread to imbox",
+      "id": "<uuid>",
+      "thread_ids": [
+        "t-10",
+      ],
+      "threads": [
+        {
+          "from": "Sender <billing@example.org>",
+          "id": "t-10",
+          "previous_bucket": "paper_trail",
+          "previous_unread": true,
+          "subject": "Invoice 42",
+        },
+      ],
+    },
+  },
+  "summary": "Proposed: Move 1 thread to imbox? A confirmation card has been shown to the user with Apply and Undo options.",
+}
+`;
+
+exports[`changing many threads at once > selects threads by filter, and checks its input > nothing 1`] = `
+{
+  "emitted": [
+    {
+      "proposal": {
+        "action": "trash",
+        "applied": true,
+        "bucket": "trash",
+        "description": "Move 1 thread to trash",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-8",
+        ],
+        "threads": [
+          {
+            "from": "Sender <news@example.org>",
+            "id": "t-8",
+            "previous_bucket": "feed",
+            "previous_unread": true,
+            "subject": "Quarterly plan",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+    {
+      "proposal": {
+        "action": "move",
+        "applied": false,
+        "bucket": "imbox",
+        "description": "Move 1 thread to imbox",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-10",
+        ],
+        "threads": [
+          {
+            "from": "Sender <billing@example.org>",
+            "id": "t-10",
+            "previous_bucket": "paper_trail",
+            "previous_unread": true,
+            "subject": "Invoice 42",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+  ],
+  "isError": true,
+  "result": {
+    "error": "No matching threads found for this bulk action.",
+  },
+  "summary": "No matching threads found for this bulk action.",
+}
+`;
+
+exports[`changing many threads at once > selects threads by filter, and checks its input > set aside source 1`] = `
+{
+  "emitted": [
+    {
+      "proposal": {
+        "action": "trash",
+        "applied": true,
+        "bucket": "trash",
+        "description": "Move 1 thread to trash",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-8",
+        ],
+        "threads": [
+          {
+            "from": "Sender <news@example.org>",
+            "id": "t-8",
+            "previous_bucket": "feed",
+            "previous_unread": true,
+            "subject": "Quarterly plan",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+    {
+      "proposal": {
+        "action": "move",
+        "applied": false,
+        "bucket": "imbox",
+        "description": "Move 1 thread to imbox",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-10",
+        ],
+        "threads": [
+          {
+            "from": "Sender <billing@example.org>",
+            "id": "t-10",
+            "previous_bucket": "paper_trail",
+            "previous_unread": true,
+            "subject": "Invoice 42",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+    {
+      "proposal": {
+        "action": "reply_later",
+        "applied": false,
+        "bucket": undefined,
+        "description": "Add 1 thread to Reply Later",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-16",
+        ],
+        "threads": [
+          {
+            "from": "Sender <sender@example.com>",
+            "id": "t-16",
+            "previous_bucket": "imbox",
+            "previous_unread": true,
+            "subject": "Not now",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+  ],
+  "result": {
+    "applied": false,
+    "count": 1,
+    "ok": true,
+    "proposal": {
+      "action": "reply_later",
+      "applied": false,
+      "description": "Add 1 thread to Reply Later",
+      "id": "<uuid>",
+      "thread_ids": [
+        "t-16",
+      ],
+      "threads": [
+        {
+          "from": "Sender <sender@example.com>",
+          "id": "t-16",
+          "previous_bucket": "imbox",
+          "previous_unread": true,
+          "subject": "Not now",
+        },
+      ],
+    },
+  },
+  "summary": "Proposed: Add 1 thread to Reply Later? A confirmation card has been shown to the user with Apply and Undo options.",
+}
+`;
+
+exports[`changing many threads at once > selects threads by filter, and checks its input > trash feed 1`] = `
+{
+  "emitted": [
+    {
+      "proposal": {
+        "action": "trash",
+        "applied": true,
+        "bucket": "trash",
+        "description": "Move 1 thread to trash",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-8",
+        ],
+        "threads": [
+          {
+            "from": "Sender <news@example.org>",
+            "id": "t-8",
+            "previous_bucket": "feed",
+            "previous_unread": true,
+            "subject": "Quarterly plan",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+  ],
+  "result": {
+    "applied": true,
+    "count": 1,
+    "ok": true,
+    "proposal": {
+      "action": "trash",
+      "applied": true,
+      "bucket": "trash",
+      "description": "Move 1 thread to trash",
+      "id": "<uuid>",
+      "thread_ids": [
+        "t-8",
+      ],
+      "threads": [
+        {
+          "from": "Sender <news@example.org>",
+          "id": "t-8",
+          "previous_bucket": "feed",
+          "previous_unread": true,
+          "subject": "Quarterly plan",
+        },
+      ],
+    },
+  },
+  "summary": "Completed: Move 1 thread to trash. An undo card has been shown to the user.",
+}
+`;
+
+exports[`changing many threads at once > undoes into each kind of previous state > mark_read 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "ok": true,
+    "restored_count": 1,
+    "thread_ids": [
+      "t-8",
+    ],
+  },
+  "summary": "Undone bulk action · Restored 1 thread",
+}
+`;
+
+exports[`changing many threads at once > undoes into each kind of previous state > move 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "ok": true,
+    "restored_count": 1,
+    "thread_ids": [
+      "t-8",
+    ],
+  },
+  "summary": "Undone bulk action · Restored 1 thread",
+}
+`;
+
+exports[`changing many threads at once > undoes into each kind of previous state > none 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "No thread IDs provided to undo",
+  },
+  "summary": "No thread IDs provided to undo",
+}
+`;
+
+exports[`changing many threads at once > undoes into each kind of previous state > not the user's 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "ok": true,
+    "restored_count": 0,
+    "thread_ids": [
+      "nope",
+    ],
+  },
+  "summary": "Undone bulk action · Restored 0 threads",
+}
+`;
+
+exports[`changing many threads at once > undoes into each kind of previous state > reply_later_off 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "ok": true,
+    "restored_count": 1,
+    "thread_ids": [
+      "t-8",
+    ],
+  },
+  "summary": "Undone bulk action · Restored 1 thread",
+}
+`;
+
+exports[`changing many threads at once > undoes into each kind of previous state > set_aside_off 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "ok": true,
+    "restored_count": 1,
+    "thread_ids": [
+      "t-8",
+    ],
+  },
+  "summary": "Undone bulk action · Restored 1 thread",
+}
+`;
+
+exports[`drafting and sending > drafts a new message, a reply, a reply to all and a forward > forward 1`] = `
+{
+  "emitted": [
+    {
+      "draft": {
+        "account_id": "ua-dom",
+        "body_text": "Hello
+
+Sam",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "hi@ua.example.org",
+        "subject": "Plan",
+        "thread_id": null,
+        "to": [
+          {
+            "email": "sam@example.org",
+            "name": "",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "Thanks",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Re: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "sender@example.com",
+            "name": "Sender",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "Thanks",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Re: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "sender@example.com",
+            "name": "Sender",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "FYI",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Fwd: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "fw@example.org",
+            "name": "",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+  ],
+  "result": {
+    "account_id": "ua-imap",
+    "body_text": "FYI",
+    "cc": [],
+    "draft_id": "<uuid>",
+    "from": "ua@imap.test",
+    "note": "The user will review and press Send.",
+    "subject": "Fwd: Mail of ua",
+    "thread_id": "t-1",
+    "to": [
+      {
+        "email": "fw@example.org",
+        "name": "",
+      },
+    ],
+  },
+  "summary": "Drafted “Fwd: Mail of ua” to fw@example.org",
+}
+`;
+
+exports[`drafting and sending > drafts a new message, a reply, a reply to all and a forward > forward no to 1`] = `
+{
+  "emitted": [
+    {
+      "draft": {
+        "account_id": "ua-dom",
+        "body_text": "Hello
+
+Sam",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "hi@ua.example.org",
+        "subject": "Plan",
+        "thread_id": null,
+        "to": [
+          {
+            "email": "sam@example.org",
+            "name": "",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "Thanks",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Re: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "sender@example.com",
+            "name": "Sender",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "Thanks",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Re: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "sender@example.com",
+            "name": "Sender",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "FYI",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Fwd: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "fw@example.org",
+            "name": "",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+  ],
+  "isError": true,
+  "result": {
+    "error": "\`to\` is required for a forward",
+  },
+  "summary": "\`to\` is required for a forward",
+}
+`;
+
+exports[`drafting and sending > drafts a new message, a reply, a reply to all and a forward > new 1`] = `
+{
+  "emitted": [
+    {
+      "draft": {
+        "account_id": "ua-dom",
+        "body_text": "Hello
+
+Sam",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "hi@ua.example.org",
+        "subject": "Plan",
+        "thread_id": null,
+        "to": [
+          {
+            "email": "sam@example.org",
+            "name": "",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+  ],
+  "result": {
+    "account_id": "ua-dom",
+    "body_text": "Hello
+
+Sam",
+    "cc": [],
+    "draft_id": "<uuid>",
+    "from": "hi@ua.example.org",
+    "note": "The user will review and press Send.",
+    "subject": "Plan",
+    "thread_id": null,
+    "to": [
+      {
+        "email": "sam@example.org",
+        "name": "",
+      },
+    ],
+  },
+  "summary": "Drafted “Plan” to sam@example.org",
+}
+`;
+
+exports[`drafting and sending > drafts a new message, a reply, a reply to all and a forward > new no subject 1`] = `
+{
+  "emitted": [
+    {
+      "draft": {
+        "account_id": "ua-dom",
+        "body_text": "Hello
+
+Sam",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "hi@ua.example.org",
+        "subject": "Plan",
+        "thread_id": null,
+        "to": [
+          {
+            "email": "sam@example.org",
+            "name": "",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+  ],
+  "isError": true,
+  "result": {
+    "error": "\`subject\` is required for a new message",
+  },
+  "summary": "\`subject\` is required for a new message",
+}
+`;
+
+exports[`drafting and sending > drafts a new message, a reply, a reply to all and a forward > new no to 1`] = `
+{
+  "emitted": [
+    {
+      "draft": {
+        "account_id": "ua-dom",
+        "body_text": "Hello
+
+Sam",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "hi@ua.example.org",
+        "subject": "Plan",
+        "thread_id": null,
+        "to": [
+          {
+            "email": "sam@example.org",
+            "name": "",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+  ],
+  "isError": true,
+  "result": {
+    "error": "\`to\` is required for a new message",
+  },
+  "summary": "\`to\` is required for a new message",
+}
+`;
+
+exports[`drafting and sending > drafts a new message, a reply, a reply to all and a forward > no body 1`] = `
+{
+  "emitted": [
+    {
+      "draft": {
+        "account_id": "ua-dom",
+        "body_text": "Hello
+
+Sam",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "hi@ua.example.org",
+        "subject": "Plan",
+        "thread_id": null,
+        "to": [
+          {
+            "email": "sam@example.org",
+            "name": "",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "Thanks",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Re: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "sender@example.com",
+            "name": "Sender",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "Thanks",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Re: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "sender@example.com",
+            "name": "Sender",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "FYI",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Fwd: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "fw@example.org",
+            "name": "",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "x",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Re: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "sender@example.com",
+            "name": "Sender",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+  ],
+  "isError": true,
+  "result": {
+    "error": "body_text is required",
+  },
+  "summary": "body_text is required",
+}
+`;
+
+exports[`drafting and sending > drafts a new message, a reply, a reply to all and a forward > reply 1`] = `
+{
+  "emitted": [
+    {
+      "draft": {
+        "account_id": "ua-dom",
+        "body_text": "Hello
+
+Sam",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "hi@ua.example.org",
+        "subject": "Plan",
+        "thread_id": null,
+        "to": [
+          {
+            "email": "sam@example.org",
+            "name": "",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "Thanks",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Re: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "sender@example.com",
+            "name": "Sender",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+  ],
+  "result": {
+    "account_id": "ua-imap",
+    "body_text": "Thanks",
+    "cc": [],
+    "draft_id": "<uuid>",
+    "from": "ua@imap.test",
+    "note": "The user will review and press Send.",
+    "subject": "Re: Mail of ua",
+    "thread_id": "t-1",
+    "to": [
+      {
+        "email": "sender@example.com",
+        "name": "Sender",
+      },
+    ],
+  },
+  "summary": "Drafted “Re: Mail of ua” to sender@example.com",
+}
+`;
+
+exports[`drafting and sending > drafts a new message, a reply, a reply to all and a forward > reply all 1`] = `
+{
+  "emitted": [
+    {
+      "draft": {
+        "account_id": "ua-dom",
+        "body_text": "Hello
+
+Sam",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "hi@ua.example.org",
+        "subject": "Plan",
+        "thread_id": null,
+        "to": [
+          {
+            "email": "sam@example.org",
+            "name": "",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "Thanks",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Re: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "sender@example.com",
+            "name": "Sender",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "Thanks",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Re: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "sender@example.com",
+            "name": "Sender",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+  ],
+  "result": {
+    "account_id": "ua-imap",
+    "body_text": "Thanks",
+    "cc": [],
+    "draft_id": "<uuid>",
+    "from": "ua@imap.test",
+    "note": "The user will review and press Send.",
+    "subject": "Re: Mail of ua",
+    "thread_id": "t-1",
+    "to": [
+      {
+        "email": "sender@example.com",
+        "name": "Sender",
+      },
+    ],
+  },
+  "summary": "Drafted “Re: Mail of ua” to sender@example.com",
+}
+`;
+
+exports[`drafting and sending > drafts a new message, a reply, a reply to all and a forward > reply from hint 1`] = `
+{
+  "emitted": [
+    {
+      "draft": {
+        "account_id": "ua-dom",
+        "body_text": "Hello
+
+Sam",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "hi@ua.example.org",
+        "subject": "Plan",
+        "thread_id": null,
+        "to": [
+          {
+            "email": "sam@example.org",
+            "name": "",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "Thanks",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Re: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "sender@example.com",
+            "name": "Sender",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "Thanks",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Re: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "sender@example.com",
+            "name": "Sender",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "FYI",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Fwd: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "fw@example.org",
+            "name": "",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "x",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Re: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "sender@example.com",
+            "name": "Sender",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+  ],
+  "result": {
+    "account_id": "ua-imap",
+    "body_text": "x",
+    "cc": [],
+    "draft_id": "<uuid>",
+    "from": "ua@imap.test",
+    "note": "The user will review and press Send.",
+    "subject": "Re: Mail of ua",
+    "thread_id": "t-1",
+    "to": [
+      {
+        "email": "sender@example.com",
+        "name": "Sender",
+      },
+    ],
+  },
+  "summary": "Drafted “Re: Mail of ua” to sender@example.com",
+}
+`;
+
+exports[`drafting and sending > drafts a new message, a reply, a reply to all and a forward > reply no thread 1`] = `
+{
+  "emitted": [
+    {
+      "draft": {
+        "account_id": "ua-dom",
+        "body_text": "Hello
+
+Sam",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "hi@ua.example.org",
+        "subject": "Plan",
+        "thread_id": null,
+        "to": [
+          {
+            "email": "sam@example.org",
+            "name": "",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "Thanks",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Re: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "sender@example.com",
+            "name": "Sender",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "Thanks",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Re: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "sender@example.com",
+            "name": "Sender",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+    {
+      "draft": {
+        "account_id": "ua-imap",
+        "body_text": "FYI",
+        "cc": [],
+        "draft_id": "<uuid>",
+        "from": "ua@imap.test",
+        "subject": "Fwd: Mail of ua",
+        "thread_id": "t-1",
+        "to": [
+          {
+            "email": "fw@example.org",
+            "name": "",
+          },
+        ],
+      },
+      "type": "draft",
+    },
+  ],
+  "isError": true,
+  "result": {
+    "error": "No thread to reply to. Pass thread_id: the id from the [[context thread=…]] block, or one from list_threads / read_thread / search_mail.",
+  },
+  "summary": "No thread to reply to. Pass thread_id: the id from the [[context thread=…]] block, or one from list_threads / read_thread / search_mail.",
+}
+`;
+
+exports[`drafting and sending > holds a send for the user unless sending is automatic > held 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "draft_id": "<uuid>",
+    "needs_confirmation": true,
+  },
+  "summary": "Waiting for the user to press Send",
+}
+`;
+
+exports[`drafting and sending > holds a send for the user unless sending is automatic > missing 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "Draft not found",
+  },
+  "summary": "Draft not found",
+}
+`;
+
+exports[`drafting and sending > holds back sending and bulk changes once the model has read mail > bulk not applied 1`] = `
+{
+  "emitted": [
+    {
+      "proposal": {
+        "action": "mark_read",
+        "applied": false,
+        "bucket": undefined,
+        "description": "Mark 1 thread as read",
+        "id": "<uuid>",
+        "thread_ids": [
+          "t-1",
+        ],
+        "threads": [
+          {
+            "from": "Sender <sender@example.com>",
+            "id": "t-1",
+            "previous_bucket": "imbox",
+            "previous_unread": true,
+            "subject": "Mail of ua",
+          },
+        ],
+      },
+      "type": "bulk_action_proposal",
+    },
+  ],
+  "result": {
+    "applied": false,
+    "count": 1,
+    "ok": true,
+    "proposal": {
+      "action": "mark_read",
+      "applied": false,
+      "description": "Mark 1 thread as read",
+      "id": "<uuid>",
+      "thread_ids": [
+        "t-1",
+      ],
+      "threads": [
+        {
+          "from": "Sender <sender@example.com>",
+          "id": "t-1",
+          "previous_bucket": "imbox",
+          "previous_unread": true,
+          "subject": "Mail of ua",
+        },
+      ],
+    },
+  },
+  "summary": "Proposed: Mark 1 thread as read? A confirmation card has been shown to the user with Apply and Undo options.",
+}
+`;
+
+exports[`drafting and sending > holds back sending and bulk changes once the model has read mail > forget refused 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "The assistant read mail in this conversation, so it cannot change what it remembers. Ask the user to say it again in a new message.",
+  },
+  "summary": "The assistant read mail in this conversation, so it cannot change what it remembers. Ask the user to say it again in a new message.",
+}
+`;
+
+exports[`drafting and sending > holds back sending and bulk changes once the model has read mail > remember refused 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "The assistant read mail in this conversation, so it cannot change what it remembers. Ask the user to say it again in a new message.",
+  },
+  "summary": "The assistant read mail in this conversation, so it cannot change what it remembers. Ask the user to say it again in a new message.",
+}
+`;
+
+exports[`drafting and sending > holds back sending and bulk changes once the model has read mail > send held back 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "draft_id": "<uuid>",
+    "needs_confirmation": true,
+  },
+  "summary": "Waiting for the user to press Send",
+}
+`;
+
+exports[`finding mail > finds a contact, from the contacts and from the address book > empty 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "query required",
+  },
+  "summary": "query required",
+}
+`;
+
+exports[`finding mail > finds a contact, from the contacts and from the address book > found 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "people": [
+      {
+        "bundled": false,
+        "contact_id": "c-4",
+        "email": "sender@example.com",
+        "name": "Sender",
+        "screen_status": "imbox",
+      },
+    ],
+  },
+  "summary": "Looked up “sender” · 1 found",
+}
+`;
+
+exports[`finding mail > finds a contact, from the contacts and from the address book > none 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "people": [],
+  },
+  "summary": "Looked up “zzz-nobody” · 0 found",
+}
+`;
+
+exports[`finding mail > lists the Screener by sender 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "senders": [
+      {
+        "account_email": "ua@imap.test",
+        "contact_id": null,
+        "email": "stranger@example.net",
+        "name": "Sender",
+        "threads": [
+          {
+            "snippet": "snippet",
+            "subject": "Lunch?",
+            "thread_id": "t-12",
+          },
+        ],
+      },
+    ],
+  },
+  "summary": "Checked the Screener · 1 waiting",
+}
+`;
+
+exports[`finding mail > lists threads in each place > bubble_up 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "bucket": "bubble_up",
+    "threads": [
+      {
+        "account_id": "ua-imap",
+        "bucket": "imbox",
+        "from": "Sender <sender@example.com>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "sender@example.com",
+        ],
+        "reply_later": false,
+        "set_aside": false,
+        "snippet": "snippet",
+        "subject": "Next month",
+        "thread_id": "t-18",
+        "unread": true,
+      },
+    ],
+  },
+  "summary": "Listed 1 thread in bubble up",
+}
+`;
+
+exports[`finding mail > lists threads in each place > everything 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "bucket": "everything",
+    "threads": [
+      {
+        "account_id": "ua-imap",
+        "bucket": "imbox",
+        "from": "Sender <sender@example.com>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "sender@example.com",
+        ],
+        "reply_later": false,
+        "set_aside": true,
+        "snippet": "snippet",
+        "subject": "Not now",
+        "thread_id": "t-16",
+        "unread": true,
+      },
+      {
+        "account_id": "ua-imap",
+        "bucket": "imbox",
+        "from": "Sender <sender@example.com>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "sender@example.com",
+        ],
+        "reply_later": true,
+        "set_aside": false,
+        "snippet": "snippet",
+        "subject": "Follow up",
+        "thread_id": "t-14",
+        "unread": true,
+      },
+      {
+        "account_id": "ua-imap",
+        "bucket": "screener",
+        "from": "Sender <stranger@example.net>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "stranger@example.net",
+        ],
+        "reply_later": false,
+        "set_aside": false,
+        "snippet": "snippet",
+        "subject": "Lunch?",
+        "thread_id": "t-12",
+        "unread": true,
+      },
+      {
+        "account_id": "ua-imap",
+        "bucket": "paper_trail",
+        "from": "Sender <billing@example.org>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "billing@example.org",
+        ],
+        "reply_later": false,
+        "set_aside": false,
+        "snippet": "snippet",
+        "subject": "Invoice 42",
+        "thread_id": "t-10",
+        "unread": true,
+      },
+      {
+        "account_id": "ua-imap",
+        "bucket": "feed",
+        "from": "Sender <news@example.org>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "news@example.org",
+        ],
+        "reply_later": false,
+        "set_aside": false,
+        "snippet": "snippet",
+        "subject": "Quarterly plan",
+        "thread_id": "t-8",
+        "unread": true,
+      },
+      {
+        "account_id": "ua-imap",
+        "bucket": "imbox",
+        "from": "Sender <sender@example.com>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "sender@example.com",
+        ],
+        "reply_later": false,
+        "set_aside": false,
+        "snippet": "snippet",
+        "subject": "Mail of ua",
+        "thread_id": "t-1",
+        "unread": true,
+      },
+    ],
+  },
+  "summary": "Listed 6 threads in everything",
+}
+`;
+
+exports[`finding mail > lists threads in each place > feed 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "bucket": "feed",
+    "threads": [
+      {
+        "account_id": "ua-imap",
+        "bucket": "feed",
+        "from": "Sender <news@example.org>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "news@example.org",
+        ],
+        "reply_later": false,
+        "set_aside": false,
+        "snippet": "snippet",
+        "subject": "Quarterly plan",
+        "thread_id": "t-8",
+        "unread": true,
+      },
+    ],
+  },
+  "summary": "Listed 1 thread in feed",
+}
+`;
+
+exports[`finding mail > lists threads in each place > imbox 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "bucket": "imbox",
+    "threads": [
+      {
+        "account_id": "ua-imap",
+        "bucket": "imbox",
+        "from": "Sender <sender@example.com>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "sender@example.com",
+        ],
+        "reply_later": false,
+        "set_aside": false,
+        "snippet": "snippet",
+        "subject": "Mail of ua",
+        "thread_id": "t-1",
+        "unread": true,
+      },
+    ],
+  },
+  "summary": "Listed 1 thread in imbox",
+}
+`;
+
+exports[`finding mail > lists threads in each place > only new 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "bucket": "imbox",
+    "threads": [
+      {
+        "account_id": "ua-imap",
+        "bucket": "imbox",
+        "from": "Sender <sender@example.com>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "sender@example.com",
+        ],
+        "reply_later": false,
+        "set_aside": false,
+        "snippet": "snippet",
+        "subject": "Mail of ua",
+        "thread_id": "t-1",
+        "unread": true,
+      },
+    ],
+  },
+  "summary": "Listed 1 thread in imbox",
+}
+`;
+
+exports[`finding mail > lists threads in each place > paper_trail 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "bucket": "paper_trail",
+    "threads": [
+      {
+        "account_id": "ua-imap",
+        "bucket": "paper_trail",
+        "from": "Sender <billing@example.org>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "billing@example.org",
+        ],
+        "reply_later": false,
+        "set_aside": false,
+        "snippet": "snippet",
+        "subject": "Invoice 42",
+        "thread_id": "t-10",
+        "unread": true,
+      },
+    ],
+  },
+  "summary": "Listed 1 thread in paper trail",
+}
+`;
+
+exports[`finding mail > lists threads in each place > previously_seen 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "bucket": "previously_seen",
+    "threads": [],
+  },
+  "summary": "Listed 0 threads in previously seen",
+}
+`;
+
+exports[`finding mail > lists threads in each place > reply_later 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "bucket": "reply_later",
+    "threads": [
+      {
+        "account_id": "ua-imap",
+        "bucket": "imbox",
+        "from": "Sender <sender@example.com>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "sender@example.com",
+        ],
+        "reply_later": true,
+        "set_aside": false,
+        "snippet": "snippet",
+        "subject": "Follow up",
+        "thread_id": "t-14",
+        "unread": true,
+      },
+    ],
+  },
+  "summary": "Listed 1 thread in reply later",
+}
+`;
+
+exports[`finding mail > lists threads in each place > screener 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "bucket": "screener",
+    "threads": [
+      {
+        "account_id": "ua-imap",
+        "bucket": "screener",
+        "from": "Sender <stranger@example.net>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "stranger@example.net",
+        ],
+        "reply_later": false,
+        "set_aside": false,
+        "snippet": "snippet",
+        "subject": "Lunch?",
+        "thread_id": "t-12",
+        "unread": true,
+      },
+    ],
+  },
+  "summary": "Listed 1 thread in screener",
+}
+`;
+
+exports[`finding mail > lists threads in each place > sent 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "bucket": "sent",
+    "threads": [],
+  },
+  "summary": "Listed 0 threads in sent",
+}
+`;
+
+exports[`finding mail > lists threads in each place > set_aside 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "bucket": "set_aside",
+    "threads": [
+      {
+        "account_id": "ua-imap",
+        "bucket": "imbox",
+        "from": "Sender <sender@example.com>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "sender@example.com",
+        ],
+        "reply_later": false,
+        "set_aside": true,
+        "snippet": "snippet",
+        "subject": "Not now",
+        "thread_id": "t-16",
+        "unread": true,
+      },
+    ],
+  },
+  "summary": "Listed 1 thread in set aside",
+}
+`;
+
+exports[`finding mail > lists threads in each place > trash 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "bucket": "trash",
+    "threads": [],
+  },
+  "summary": "Listed 0 threads in trash",
+}
+`;
+
+exports[`finding mail > reads a thread, and refuses one that is not the user's > max one 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "account_email": "ua@imap.test",
+    "bucket": "imbox",
+    "message_count": 1,
+    "messages": [
+      {
+        "attachments": [
+          "a.txt",
+        ],
+        "cc": [],
+        "date": "<iso>",
+        "from": "Sender <sender@example.com>",
+        "from_me": false,
+        "message_id": "m-2",
+        "text": "body",
+        "to": [],
+      },
+    ],
+    "note": null,
+    "participants": [
+      {
+        "email": "sender@example.com",
+        "name": "Sender",
+      },
+    ],
+    "subject": "Mail of ua",
+    "thread_id": "t-1",
+    "truncated": false,
+  },
+  "summary": "Read “Mail of ua” · 1 of 1 message",
+}
+`;
+
+exports[`finding mail > reads a thread, and refuses one that is not the user's > missing 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "Thread not found",
+  },
+  "summary": "Thread not found",
+}
+`;
+
+exports[`finding mail > reads a thread, and refuses one that is not the user's > read 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "account_email": "ua@imap.test",
+    "bucket": "imbox",
+    "message_count": 1,
+    "messages": [
+      {
+        "attachments": [
+          "a.txt",
+        ],
+        "cc": [],
+        "date": "<iso>",
+        "from": "Sender <sender@example.com>",
+        "from_me": false,
+        "message_id": "m-2",
+        "text": "body",
+        "to": [],
+      },
+    ],
+    "note": null,
+    "participants": [
+      {
+        "email": "sender@example.com",
+        "name": "Sender",
+      },
+    ],
+    "subject": "Mail of ua",
+    "thread_id": "t-1",
+    "truncated": false,
+  },
+  "summary": "Read “Mail of ua” · 1 of 1 message",
+}
+`;
+
+exports[`finding mail > searches by words and by filters > dates 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "count": 0,
+    "results": [],
+  },
+  "summary": "Searched mail for 2030-01-01 to 2030-02-01 · 0 results",
+}
+`;
+
+exports[`finding mail > searches by words and by filters > label 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "count": 0,
+    "results": [],
+  },
+  "summary": "Searched mail for labeled L-ua · 0 results",
+}
+`;
+
+exports[`finding mail > searches by words and by filters > no filter 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "Provide a search query or at least one filter (e.g. from_sender, unread_only, has_attachment, bucket, date range, or label).",
+  },
+  "summary": "Provide a search query or at least one filter (e.g. from_sender, unread_only, has_attachment, bucket, date range, or label).",
+}
+`;
+
+exports[`finding mail > searches by words and by filters > query 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "count": 1,
+    "results": [
+      {
+        "account_id": "ua-imap",
+        "bucket": "feed",
+        "from": "Sender <news@example.org>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "news@example.org",
+        ],
+        "reply_later": false,
+        "set_aside": false,
+        "snippet": "snippet",
+        "subject": "Quarterly plan",
+        "thread_id": "t-8",
+        "unread": true,
+      },
+    ],
+  },
+  "summary": "Searched mail for “quarterly” · 1 result",
+}
+`;
+
+exports[`finding mail > searches by words and by filters > recipient 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "count": 0,
+    "results": [],
+  },
+  "summary": "Searched mail · 0 results",
+}
+`;
+
+exports[`finding mail > searches by words and by filters > reply later 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "count": 1,
+    "results": [
+      {
+        "account_id": "ua-imap",
+        "bucket": "imbox",
+        "from": "Sender <sender@example.com>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "sender@example.com",
+        ],
+        "reply_later": true,
+        "set_aside": false,
+        "snippet": "snippet",
+        "subject": "Follow up",
+        "thread_id": "t-14",
+        "unread": true,
+      },
+    ],
+  },
+  "summary": "Searched mail for “x”, in reply later · 1 result",
+}
+`;
+
+exports[`finding mail > searches by words and by filters > sender and bucket 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "count": 1,
+    "results": [
+      {
+        "account_id": "ua-imap",
+        "bucket": "paper_trail",
+        "from": "Sender <billing@example.org>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "billing@example.org",
+        ],
+        "reply_later": false,
+        "set_aside": false,
+        "snippet": "snippet",
+        "subject": "Invoice 42",
+        "thread_id": "t-10",
+        "unread": true,
+      },
+    ],
+  },
+  "summary": "Searched mail for from billing, in paper trail · 1 result",
+}
+`;
+
+exports[`finding mail > searches by words and by filters > unread 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "count": 2,
+    "results": [
+      {
+        "account_id": "ua-imap",
+        "bucket": "imbox",
+        "from": "Sender <sender@example.com>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "sender@example.com",
+        ],
+        "reply_later": false,
+        "set_aside": false,
+        "snippet": "snippet",
+        "subject": "Next month",
+        "thread_id": "t-18",
+        "unread": true,
+      },
+      {
+        "account_id": "ua-imap",
+        "bucket": "imbox",
+        "from": "Sender <sender@example.com>",
+        "labels": [],
+        "last_message_at": "<iso>",
+        "messages": 1,
+        "new": true,
+        "participants": [
+          "sender@example.com",
+        ],
+        "reply_later": false,
+        "set_aside": true,
+        "snippet": "snippet",
+        "subject": "Not now",
+        "thread_id": "t-16",
+        "unread": true,
+      },
+    ],
+  },
+  "summary": "Searched mail for unread · 2 results",
+}
+`;
+
+exports[`labels, collections and clips > adds a thread to a collection, and clips text from it > add 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "ok": true,
+  },
+  "summary": "Added “Mail of ua” to C-ua",
+}
+`;
+
+exports[`labels, collections and clips > adds a thread to a collection, and clips text from it > clip 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "clip_id": "<uuid>",
+  },
+  "summary": "Clipped “worth keeping”",
+}
+`;
+
+exports[`labels, collections and clips > adds a thread to a collection, and clips text from it > clip missing 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "Thread not found or empty text",
+  },
+  "summary": "Thread not found or empty text",
+}
+`;
+
+exports[`labels, collections and clips > adds a thread to a collection, and clips text from it > empty clip 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "Thread not found or empty text",
+  },
+  "summary": "Thread not found or empty text",
+}
+`;
+
+exports[`labels, collections and clips > adds a thread to a collection, and clips text from it > missing 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "Thread or collection not found",
+  },
+  "summary": "Thread or collection not found",
+}
+`;
+
+exports[`labels, collections and clips > lists labels and collections, and makes a collection > collections 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "collections": [
+      {
+        "description": "",
+        "id": "<uuid>",
+        "name": "C-ua",
+        "thread_count": 0,
+      },
+    ],
+  },
+  "summary": "Listed 1 collections",
+}
+`;
+
+exports[`labels, collections and clips > lists labels and collections, and makes a collection > create 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "collection_id": "<uuid>",
+    "name": "Taxes",
+  },
+  "summary": "Created collection “Taxes”",
+}
+`;
+
+exports[`labels, collections and clips > lists labels and collections, and makes a collection > labels 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "labels": [
+      {
+        "id": "<uuid>",
+        "name": "L-ua",
+      },
+    ],
+  },
+  "summary": "Listed 1 labels",
+}
+`;
+
+exports[`labels, collections and clips > lists labels and collections, and makes a collection > no name 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "name required",
+  },
+  "summary": "name required",
+}
+`;
+
+exports[`the Daily Brief, catching up and actions > catches up on a thread without an AI provider > from hint 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "ask": "Awaiting response to Sender",
+    "changes": [
+      "Sender: body",
+    ],
+    "new_count": 1,
+    "subject": "Mail of ua",
+    "thread_id": "t-1",
+  },
+  "summary": "Caught up on “Mail of ua”",
+}
+`;
+
+exports[`the Daily Brief, catching up and actions > catches up on a thread without an AI provider > missing 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "Thread not found",
+  },
+  "summary": "Thread not found",
+}
+`;
+
+exports[`the Daily Brief, catching up and actions > catches up on a thread without an AI provider > no thread 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "No thread specified. Provide thread_id or ask about an attached thread.",
+  },
+  "summary": "No thread specified. Provide thread_id or ask about an attached thread.",
+}
+`;
+
+exports[`the Daily Brief, catching up and actions > catches up on a thread without an AI provider > thread 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "ask": "Awaiting response to Sender",
+    "changes": [
+      "Sender: body",
+    ],
+    "new_count": 1,
+    "subject": "Mail of ua",
+    "thread_id": "t-1",
+  },
+  "summary": "Caught up on “Mail of ua”",
+}
+`;
+
+exports[`the Daily Brief, catching up and actions > finds actions on a thread, and across threads > across 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "actions": [],
+    "count": 0,
+  },
+  "summary": "Found 0 actions across active threads",
+}
+`;
+
+exports[`the Daily Brief, catching up and actions > finds actions on a thread, and across threads > kind 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "actions": [],
+    "overview": null,
+    "subject": "Mail of ua",
+    "thread_id": "t-1",
+  },
+  "summary": "Found 0 actions in “Mail of ua”",
+}
+`;
+
+exports[`the Daily Brief, catching up and actions > finds actions on a thread, and across threads > missing 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "Thread not found",
+  },
+  "summary": "Thread not found",
+}
+`;
+
+exports[`the Daily Brief, catching up and actions > finds actions on a thread, and across threads > thread 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "actions": [],
+    "overview": null,
+    "subject": "Mail of ua",
+    "thread_id": "t-1",
+  },
+  "summary": "Found 0 actions in “Mail of ua”",
+}
+`;
+
+exports[`the Daily Brief, catching up and actions > gives the brief for the day 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "day": "<date>",
+    "headline": "3 waiting for your reply",
+    "items": [
+      {
+        "age_days": 0,
+        "from": "Sender <sender@example.com>",
+        "kind": "reply",
+        "subject": "Follow up",
+        "thread_id": "t-14",
+        "urgent": false,
+        "why": "You parked this to answer later",
+      },
+      {
+        "age_days": 0,
+        "from": "Sender <sender@example.com>",
+        "kind": "reply",
+        "subject": "Mail of ua",
+        "thread_id": "t-1",
+        "urgent": false,
+        "why": "New from Sender",
+      },
+      {
+        "age_days": 0,
+        "from": "",
+        "kind": "reply",
+        "subject": "Agent mail of ua",
+        "thread_id": "t-ua-agent-msg",
+        "urgent": false,
+        "why": "New from ",
+      },
+    ],
+    "meetings": [],
+    "source": "rules",
+  },
+  "summary": "Daily Brief for <date>: 3 items, 0 meetings",
+}
+`;
+
+exports[`the Daily Brief, catching up and actions > lists noisy and misfiled senders > all 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "kind": "all",
+    "misfiled": [],
+    "noisy": [
+      {
+        "bundled": false,
+        "contact_id": "c-4",
+        "email": "sender@example.com",
+        "last_seen": "<iso>",
+        "message_count": 9,
+        "name": "Sender",
+      },
+    ],
+  },
+  "summary": "Found 0 misfiled and 1 noisy sender",
+}
+`;
+
+exports[`the Daily Brief, catching up and actions > lists noisy and misfiled senders > misfiled 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "kind": "misfiled",
+    "misfiled": [],
+    "noisy": [],
+  },
+  "summary": "Found 0 misfiled senders",
+}
+`;
+
+exports[`the Daily Brief, catching up and actions > lists noisy and misfiled senders > noisy 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "kind": "noisy",
+    "misfiled": [],
+    "noisy": [
+      {
+        "bundled": false,
+        "contact_id": "c-4",
+        "email": "sender@example.com",
+        "last_seen": "<iso>",
+        "message_count": 9,
+        "name": "Sender",
+      },
+    ],
+  },
+  "summary": "Found 1 noisy sender",
+}
+`;
+
+exports[`the calendar > finds free time around busy events > bad date 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "Invalid from_date (expected YYYY-MM-DD)",
+  },
+  "summary": "Invalid from_date (expected YYYY-MM-DD)",
+}
+`;
+
+exports[`the calendar > finds free time around busy events > clamped 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "free_slots": [
+      {
+        "date": "2030-01-01",
+        "duration_minutes": 60,
+        "end_time": "00:00",
+        "ends_at": 1893542400000,
+        "start_time": "23:00",
+        "starts_at": 1893538800000,
+      },
+    ],
+    "timezone": "UTC",
+    "total": 1,
+  },
+  "summary": "Found 1 available slot",
+}
+`;
+
+exports[`the calendar > finds free time around busy events > one day 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "free_slots": [
+      {
+        "date": "2030-01-01",
+        "duration_minutes": 480,
+        "end_time": "17:00",
+        "ends_at": 1893517200000,
+        "start_time": "09:00",
+        "starts_at": 1893488400000,
+      },
+    ],
+    "timezone": "UTC",
+    "total": 1,
+  },
+  "summary": "Found 1 available slot",
+}
+`;
+
+exports[`the calendar > finds free time around busy events > range 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "free_slots": [
+      {
+        "date": "2030-01-01",
+        "duration_minutes": 240,
+        "end_time": "12:00",
+        "ends_at": 1893499200000,
+        "start_time": "08:00",
+        "starts_at": 1893484800000,
+      },
+      {
+        "date": "2030-01-02",
+        "duration_minutes": 240,
+        "end_time": "12:00",
+        "ends_at": 1893585600000,
+        "start_time": "08:00",
+        "starts_at": 1893571200000,
+      },
+      {
+        "date": "2030-01-03",
+        "duration_minutes": 240,
+        "end_time": "12:00",
+        "ends_at": 1893672000000,
+        "start_time": "08:00",
+        "starts_at": 1893657600000,
+      },
+    ],
+    "timezone": "UTC",
+    "total": 3,
+  },
+  "summary": "Found 3 available slots",
+}
+`;
+
+exports[`the calendar > finds free time around busy events > reversed 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "\`to_date\` cannot be before \`from_date\`",
+  },
+  "summary": "\`to_date\` cannot be before \`from_date\`",
+}
+`;
+
+exports[`the calendar > lists events in a range > empty range 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "events": [],
+    "from": "<date>",
+    "timezone": "UTC",
+    "to": "<date>",
+    "total": 0,
+  },
+  "summary": "Found 0 events between <date> and <date>",
+}
+`;
+
+exports[`the calendar > lists events in a range > next week 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "events": [
+      {
+        "all_day": false,
+        "attendees": [],
+        "calendar": "Cal-ua",
+        "date": "<date>",
+        "end_time": "13:00",
+        "id": "<uuid>",
+        "start_time": "12:00",
+        "status": "confirmed",
+        "title": "Lunch ua",
+      },
+    ],
+    "from": "<date>",
+    "timezone": "UTC",
+    "to": "<date>",
+    "total": 1,
+  },
+  "summary": "Found 1 event between <date> and <date>",
+}
+`;
+
+exports[`the calendar > lists events in a range > reversed 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "\`to\` date cannot be before \`from\` date",
+  },
+  "summary": "\`to\` date cannot be before \`from\` date",
+}
+`;
+
+exports[`the calendar > proposes an event as a card, and does not save it > all day 1`] = `
+{
+  "emitted": [
+    {
+      "proposal": {
+        "all_day": false,
+        "attendees": [
+          "a@b.co",
+        ],
+        "calendar_id": undefined,
+        "description": undefined,
+        "end_date": "2030-03-04",
+        "ends_at": 1898867700000,
+        "id": "<uuid>",
+        "location": "Room 2",
+        "start_date": "2030-03-04",
+        "starts_at": 1898865000000,
+        "title": "Review",
+      },
+      "type": "event_proposal",
+    },
+    {
+      "proposal": {
+        "all_day": true,
+        "attendees": undefined,
+        "calendar_id": undefined,
+        "description": undefined,
+        "end_date": "2030-03-04",
+        "ends_at": 1898899199999,
+        "id": "<uuid>",
+        "location": undefined,
+        "start_date": "2030-03-04",
+        "starts_at": 1898812800000,
+        "title": "Offsite",
+      },
+      "type": "event_proposal",
+    },
+  ],
+  "result": {
+    "all_day": true,
+    "end_date": "2030-03-04",
+    "ends_at": 1898899199999,
+    "id": "<uuid>",
+    "note": "The event proposal card has been presented to the user to review and confirm.",
+    "start_date": "2030-03-04",
+    "starts_at": 1898812800000,
+    "title": "Offsite",
+  },
+  "summary": "Proposed event “Offsite” on 2030-03-04",
+}
+`;
+
+exports[`the calendar > proposes an event as a card, and does not save it > bad date 1`] = `
+{
+  "emitted": [
+    {
+      "proposal": {
+        "all_day": false,
+        "attendees": [
+          "a@b.co",
+        ],
+        "calendar_id": undefined,
+        "description": undefined,
+        "end_date": "2030-03-04",
+        "ends_at": 1898867700000,
+        "id": "<uuid>",
+        "location": "Room 2",
+        "start_date": "2030-03-04",
+        "starts_at": 1898865000000,
+        "title": "Review",
+      },
+      "type": "event_proposal",
+    },
+    {
+      "proposal": {
+        "all_day": true,
+        "attendees": undefined,
+        "calendar_id": undefined,
+        "description": undefined,
+        "end_date": "2030-03-04",
+        "ends_at": 1898899199999,
+        "id": "<uuid>",
+        "location": undefined,
+        "start_date": "2030-03-04",
+        "starts_at": 1898812800000,
+        "title": "Offsite",
+      },
+      "type": "event_proposal",
+    },
+    {
+      "proposal": {
+        "all_day": false,
+        "attendees": undefined,
+        "calendar_id": undefined,
+        "description": undefined,
+        "end_date": "2030-03-04",
+        "ends_at": 1898847900000,
+        "id": "<uuid>",
+        "location": undefined,
+        "start_date": "2030-03-04",
+        "starts_at": 1898845200000,
+        "title": "Call",
+      },
+      "type": "event_proposal",
+    },
+  ],
+  "isError": true,
+  "result": {
+    "error": "Invalid date (expected YYYY-MM-DD)",
+  },
+  "summary": "Invalid date (expected YYYY-MM-DD)",
+}
+`;
+
+exports[`the calendar > proposes an event as a card, and does not save it > duration 1`] = `
+{
+  "emitted": [
+    {
+      "proposal": {
+        "all_day": false,
+        "attendees": [
+          "a@b.co",
+        ],
+        "calendar_id": undefined,
+        "description": undefined,
+        "end_date": "2030-03-04",
+        "ends_at": 1898867700000,
+        "id": "<uuid>",
+        "location": "Room 2",
+        "start_date": "2030-03-04",
+        "starts_at": 1898865000000,
+        "title": "Review",
+      },
+      "type": "event_proposal",
+    },
+    {
+      "proposal": {
+        "all_day": true,
+        "attendees": undefined,
+        "calendar_id": undefined,
+        "description": undefined,
+        "end_date": "2030-03-04",
+        "ends_at": 1898899199999,
+        "id": "<uuid>",
+        "location": undefined,
+        "start_date": "2030-03-04",
+        "starts_at": 1898812800000,
+        "title": "Offsite",
+      },
+      "type": "event_proposal",
+    },
+    {
+      "proposal": {
+        "all_day": false,
+        "attendees": undefined,
+        "calendar_id": undefined,
+        "description": undefined,
+        "end_date": "2030-03-04",
+        "ends_at": 1898847900000,
+        "id": "<uuid>",
+        "location": undefined,
+        "start_date": "2030-03-04",
+        "starts_at": 1898845200000,
+        "title": "Call",
+      },
+      "type": "event_proposal",
+    },
+  ],
+  "result": {
+    "all_day": false,
+    "end_date": "2030-03-04",
+    "ends_at": 1898847900000,
+    "id": "<uuid>",
+    "note": "The event proposal card has been presented to the user to review and confirm.",
+    "start_date": "2030-03-04",
+    "starts_at": 1898845200000,
+    "title": "Call",
+  },
+  "summary": "Proposed event “Call” on 2030-03-04",
+}
+`;
+
+exports[`the calendar > proposes an event as a card, and does not save it > no title 1`] = `
+{
+  "emitted": [
+    {
+      "proposal": {
+        "all_day": false,
+        "attendees": [
+          "a@b.co",
+        ],
+        "calendar_id": undefined,
+        "description": undefined,
+        "end_date": "2030-03-04",
+        "ends_at": 1898867700000,
+        "id": "<uuid>",
+        "location": "Room 2",
+        "start_date": "2030-03-04",
+        "starts_at": 1898865000000,
+        "title": "Review",
+      },
+      "type": "event_proposal",
+    },
+    {
+      "proposal": {
+        "all_day": true,
+        "attendees": undefined,
+        "calendar_id": undefined,
+        "description": undefined,
+        "end_date": "2030-03-04",
+        "ends_at": 1898899199999,
+        "id": "<uuid>",
+        "location": undefined,
+        "start_date": "2030-03-04",
+        "starts_at": 1898812800000,
+        "title": "Offsite",
+      },
+      "type": "event_proposal",
+    },
+    {
+      "proposal": {
+        "all_day": false,
+        "attendees": undefined,
+        "calendar_id": undefined,
+        "description": undefined,
+        "end_date": "2030-03-04",
+        "ends_at": 1898847900000,
+        "id": "<uuid>",
+        "location": undefined,
+        "start_date": "2030-03-04",
+        "starts_at": 1898845200000,
+        "title": "Call",
+      },
+      "type": "event_proposal",
+    },
+  ],
+  "isError": true,
+  "result": {
+    "error": "title is required",
+  },
+  "summary": "title is required",
+}
+`;
+
+exports[`the calendar > proposes an event as a card, and does not save it > timed 1`] = `
+{
+  "emitted": [
+    {
+      "proposal": {
+        "all_day": false,
+        "attendees": [
+          "a@b.co",
+        ],
+        "calendar_id": undefined,
+        "description": undefined,
+        "end_date": "2030-03-04",
+        "ends_at": 1898867700000,
+        "id": "<uuid>",
+        "location": "Room 2",
+        "start_date": "2030-03-04",
+        "starts_at": 1898865000000,
+        "title": "Review",
+      },
+      "type": "event_proposal",
+    },
+  ],
+  "result": {
+    "all_day": false,
+    "attendees": [
+      "a@b.co",
+    ],
+    "end_date": "2030-03-04",
+    "ends_at": 1898867700000,
+    "id": "<uuid>",
+    "location": "Room 2",
+    "note": "The event proposal card has been presented to the user to review and confirm.",
+    "start_date": "2030-03-04",
+    "starts_at": 1898865000000,
+    "title": "Review",
+  },
+  "summary": "Proposed event “Review” on 2030-03-04",
+}
+`;
+
+exports[`the tool list > answers an unknown tool with an error, and a mailbox-less user with a clear one 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "Unknown tool no_such_tool",
+  },
+  "summary": "Unknown tool no_such_tool",
+}
+`;
+
+exports[`the tool list > answers an unknown tool with an error, and a mailbox-less user with a clear one 2`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "No mail accounts are connected yet.",
+  },
+  "summary": "No mail accounts are connected yet.",
+}
+`;
+
+exports[`the tool list > names every tool the assistant is offered 1`] = `
+[
+  "add_to_collection",
+  "bulk_thread_action",
+  "bundle_sender",
+  "catch_up_thread",
+  "create_collection",
+  "create_draft",
+  "draft_workflow",
+  "find_contact",
+  "find_free_time",
+  "find_thread_actions",
+  "forget",
+  "get_daily_brief",
+  "list_collections",
+  "list_events",
+  "list_labels",
+  "list_memory",
+  "list_noisy_or_misfiled_senders",
+  "list_screener",
+  "list_threads",
+  "propose_event",
+  "read_thread",
+  "remember",
+  "save_clip",
+  "screen_sender",
+  "search_mail",
+  "send_draft",
+  "set_contact_destination",
+  "thread_action",
+  "undo_bulk_action",
+]
+`;
+
+exports[`what the assistant remembers > lists, remembers and forgets > empty 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "content required",
+  },
+  "summary": "content required",
+}
+`;
+
+exports[`what the assistant remembers > lists, remembers and forgets > forget 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "ok": true,
+  },
+  "summary": "Forgot that",
+}
+`;
+
+exports[`what the assistant remembers > lists, remembers and forgets > forget missing 1`] = `
+{
+  "emitted": [],
+  "isError": true,
+  "result": {
+    "error": "Memory entry not found",
+  },
+  "summary": "Memory entry not found",
+}
+`;
+
+exports[`what the assistant remembers > lists, remembers and forgets > list 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "memory": [
+      {
+        "content": "I prefer short answers ua",
+        "id": "<uuid>",
+        "kind": "tone",
+        "source": "user",
+      },
+    ],
+  },
+  "summary": "Recalled 1 memory entries",
+}
+`;
+
+exports[`what the assistant remembers > lists, remembers and forgets > remember 1`] = `
+{
+  "emitted": [],
+  "result": {
+    "id": "<uuid>",
+  },
+  "summary": "Remembered: Keep it short",
+}
+`;

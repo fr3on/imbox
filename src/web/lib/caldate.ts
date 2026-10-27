@@ -1,0 +1,368 @@
+/**
+ * Calendar date helpers.
+ *
+ * Two value shapes travel through the calendar UI:
+ *   - a "key": a `YYYY-MM-DD` string, the identity of a day in the user's own timezone.
+ *   - an "instant": epoch milliseconds, as the API sends every timed value.
+ *
+ * Everything here works in local wall time — a key is turned into a Date at local midnight,
+ * never UTC midnight, so a birthday lands on the same square wherever you open the app.
+ */
+import {
+  addDays as dfAddDays,
+  addMonths as dfAddMonths,
+  differenceInCalendarDays,
+  endOfMonth,
+  format,
+  isWeekend as dfIsWeekend,
+  parseISO,
+  startOfMonth,
+  startOfWeek,
+} from "date-fns";
+
+/** date-fns' weekStartsOn is a 0-6 union; our settings carry a plain number. */
+type WeekDay = 0 | 1 | 2 | 3 | 4 | 5 | 6;
+function wk(weekStart: number): WeekDay {
+  return (((weekStart % 7) + 7) % 7) as WeekDay;
+}
+
+const MINUTE = 60_000;
+const HOUR = 60 * MINUTE;
+
+// ---------- Keys ----------
+
+/** Today, as a `YYYY-MM-DD` key in local time. */
+export function todayKey(): string {
+  return dateKey(Date.now());
+}
+
+/** The local day an instant falls on. */
+export function dateKey(ms: number): string {
+  return format(new Date(ms), "yyyy-MM-dd");
+}
+
+/** Local midnight at the start of `key`. (parseISO reads a date-only string as local time.) */
+export function keyToDate(key: string): Date {
+  return parseISO(key);
+}
+
+/** `key` shifted by `n` calendar days (DST-safe: it moves days, not milliseconds). */
+export function addDays(key: string, n: number): string {
+  return dateKey(dfAddDays(keyToDate(key), n).getTime());
+}
+
+/** Calendar days from `a` to `b`. Positive when `b` is later. */
+export function daysBetween(a: string, b: string): number {
+  return differenceInCalendarDays(keyToDate(b), keyToDate(a));
+}
+
+/** The first day of the week containing `key`. `weekStart` 0 = Sunday, 1 = Monday. */
+export function weekStartOf(key: string, weekStart: number): string {
+  return dateKey(startOfWeek(keyToDate(key), { weekStartsOn: wk(weekStart) }).getTime());
+}
+
+/** The 7 keys of the week containing `key`. */
+export function weekDays(key: string, weekStart: number): string[] {
+  const start = weekStartOf(key, weekStart);
+  return Array.from({ length: 7 }, (_, i) => addDays(start, i));
+}
+
+/**
+ * 6x7 = 42 keys covering the month containing `key`, starting on `weekStart`.
+ * Always six rows so the grid never changes height as you page through months.
+ */
+export function monthGrid(key: string, weekStart: number): string[] {
+  const first = dateKey(startOfMonth(keyToDate(key)).getTime());
+  const start = weekStartOf(first, weekStart);
+  return Array.from({ length: 42 }, (_, i) => addDays(start, i));
+}
+
+/** The month `key` belongs to, as its own key (the 1st). */
+
+export function monthStartOf(key: string): string {
+  return dateKey(startOfMonth(keyToDate(key)).getTime());
+}
+
+/** The last day of the month containing `key`. */
+export function monthEndOf(key: string): string {
+  return dateKey(endOfMonth(keyToDate(key)).getTime());
+}
+
+/** `key` shifted by `n` calendar months; the 31st lands on the last day of a shorter month. */
+export function addMonths(key: string, n: number): string {
+  return dateKey(dfAddMonths(keyToDate(key), n).getTime());
+}
+
+// ---------- Predicates ----------
+
+export function isToday(key: string): boolean {
+  return key === todayKey();
+}
+
+/** Strictly before today. Today itself is not past. */
+export function isPast(key: string): boolean {
+  return key < todayKey();
+}
+
+export function isWeekend(key: string): boolean {
+  return dfIsWeekend(keyToDate(key));
+}
+
+export function isSameMonth(a: string, b: string): boolean {
+  return a.slice(0, 7) === b.slice(0, 7);
+}
+
+// ---------- Labels ----------
+
+/** "January 2026" */
+export function monthLabel(key: string): string {
+  return format(keyToDate(key), "MMMM yyyy");
+}
+
+/** "Thursday" */
+export function weekdayLabel(key: string): string {
+  return format(keyToDate(key), "EEEE");
+}
+
+/** "Thu" */
+export function weekdayShort(key: string): string {
+  return format(keyToDate(key), "EEE");
+}
+
+/** "15" */
+export function dayNumber(key: string): string {
+  return format(keyToDate(key), "d");
+}
+
+/** "September" */
+export function monthName(key: string): string {
+  return format(keyToDate(key), "MMMM");
+}
+
+/** "Sep" */
+export function monthShort(key: string): string {
+  return format(keyToDate(key), "MMM");
+}
+
+/** "Thursday, 15 January 2026" — for headers and tooltips. */
+export function longDayLabel(key: string): string {
+  return format(keyToDate(key), "EEEE, d MMMM yyyy");
+}
+
+// ---------- Times ----------
+
+/** "9:30 AM" (12h) or "09:30" (24h). */
+export function fmtTime(ms: number, format12: "12" | "24"): string {
+  return format(new Date(ms), format12 === "24" ? "HH:mm" : "h:mm a");
+}
+
+/**
+ * "9:30 – 10:30 AM", "09:30 – 10:30", "All day".
+ * In 12-hour form a shared meridiem is printed once, the way a calendar chip reads best.
+ */
+export function fmtTimeRange(startMs: number, endMs: number, allDay: boolean, format12: "12" | "24"): string {
+  if (allDay) return "All day";
+  const start = fmtTime(startMs, format12);
+  if (endMs <= startMs) return start;
+  const end = fmtTime(endMs, format12);
+  if (format12 === "12") {
+    const sm = start.slice(-2);
+    // Same meridiem and same day: "9:30 – 10:30 AM".
+    if (sm === end.slice(-2) && dateKey(startMs) === dateKey(endMs)) return `${start.slice(0, -3)} – ${end}`;
+  }
+  return `${start} – ${end}`;
+}
+
+/**
+ * The hour gutter's label: `1 AM` … `Noon` … `11 PM`, or `01:00` … `23:00` in 24-hour mode.
+ * Midnight is `12 AM` / `00:00`; the top of the grid leaves it out.
+ */
+export function hourLabel(hour: number, format12: "12" | "24"): string {
+  if (format12 === "24") return `${String(hour).padStart(2, "0")}:00`;
+  if (hour === 0) return "12 AM";
+  if (hour === 12) return "Noon";
+  return hour < 12 ? `${hour} AM` : `${hour - 12} PM`;
+}
+
+/** "9 AM", "2:30 PM" (minutes only when there are any) or "09:00", "14:30". */
+export function shortTime(ms: number, format12: "12" | "24"): string {
+  const d = new Date(ms);
+  if (format12 === "24") return format(d, "HH:mm");
+  return format(d, d.getMinutes() === 0 ? "h a" : "h:mm a");
+}
+
+/** "9 – 10 AM", "9:30 – 10:15 AM", "11:30 AM – 1 PM" or "09:00 – 10:00" — the line under a block's title. */
+export function shortRange(startMs: number, endMs: number, format12: "12" | "24"): string {
+  const a = shortTime(startMs, format12);
+  const b = shortTime(endMs, format12);
+  if (format12 === "12" && a.slice(-2) === b.slice(-2) && dateKey(startMs) === dateKey(endMs)) return `${a.slice(0, -3)} – ${b}`;
+  return `${a} – ${b}`;
+}
+
+/** "9:21" or "09:21" — the now line's pill. */
+export function clockTime(ms: number, format12: "12" | "24"): string {
+  return format(new Date(ms), format12 === "24" ? "HH:mm" : "h:mm");
+}
+
+/** Minutes since local midnight — the y coordinate of an instant in a day column. */
+export function minutesOfDay(ms: number): number {
+  const d = new Date(ms);
+  return d.getHours() * 60 + d.getMinutes();
+}
+
+/** The instant at `minutes` past local midnight on `key`. DST-safe (built from wall-clock parts). */
+export function msAt(key: string, minutes: number): number {
+  const d = keyToDate(key);
+  return new Date(d.getFullYear(), d.getMonth(), d.getDate(), 0, minutes, 0, 0).getTime();
+}
+
+/** Local midnight at the start of `key`, in ms. */
+export function startOfDayMs(key: string): number {
+  return msAt(key, 0);
+}
+
+// ---------- Relative ----------
+
+/** "Today", "Tomorrow", "Yesterday" — otherwise "" so callers can fall back to a date label. */
+export function relativeDay(key: string): string {
+  const d = daysBetween(todayKey(), key);
+  if (d === 0) return "Today";
+  if (d === 1) return "Tomorrow";
+  if (d === -1) return "Yesterday";
+  return "";
+}
+
+/** "in 12 days", "tomorrow", "today", "yesterday", "8 days ago" — for countdown events. */
+export function countdownLabel(key: string): string {
+  const d = daysBetween(todayKey(), key);
+  if (d === 0) return "today";
+  if (d === 1) return "tomorrow";
+  if (d === -1) return "yesterday";
+  if (d > 0) return `in ${d} days`;
+  return `${-d} days ago`;
+}
+
+// ---------- Overlap layout ----------
+
+/** Zero-length (and sub-15-minute) events still need room to be clicked. */
+const MIN_SLOT = 15 * MINUTE;
+
+export interface ColumnSlot {
+  /** 0-based column within the cluster. */
+  column: number;
+  /** How many columns the cluster ended up needing; width is 1 / columns. */
+  columns: number;
+}
+
+/**
+ * Lay overlapping timed events into side-by-side columns: events sit
+ * beside each other rather than stacking on top of one another.
+ *
+ * The algorithm, in three moves:
+ *
+ *  1. Sort by start time, then by longest first. Long events therefore claim the leftmost
+ *     column of a cluster, and the short ones that begin inside them fan out to the right,
+ *     which is what reads naturally.
+ *
+ *  2. Walk the sorted list and cut it into *clusters*: a maximal run of events where each
+ *     one starts before everything seen so far has ended. `clusterEnd` tracks the furthest
+ *     end reached; the moment an event starts at or after it, nothing in the run can
+ *     overlap anything that follows, so the cluster is closed and widths are frozen.
+ *     Width is decided per cluster, not globally, so one busy hour does not squeeze the
+ *     rest of the day.
+ *
+ *  3. Inside a cluster, place each event in the first column whose previous occupant has
+ *     already ended (`colEnds[c] <= start`); if every column is still busy, open a new one.
+ *     This is the classic interval-partitioning greedy, and it uses the minimum possible
+ *     number of columns for the cluster.
+ *
+ * Ends are clamped up to `minMs` for overlap purposes only, so a zero-length event does
+ * not silently vanish underneath its neighbour.
+ *
+ * `minMs` is how long the shortest drawable event *looks*, which is not how long it is: a view
+ * that floors a block at some pixel height is drawing a 15-minute meeting as though it ran for an
+ * hour, and two events that do not overlap in time then overlap on screen. Pass the floor the view
+ * actually renders with — converted to milliseconds — and the columns will match what is drawn.
+ *
+ * @returns one `{ column, columns }` per input event, in the *input* order.
+ */
+export function layoutColumns<T extends { starts_at: number; ends_at: number }>(events: T[], minMs = MIN_SLOT): ColumnSlot[] {
+  const out: ColumnSlot[] = events.map(() => ({ column: 0, columns: 1 }));
+  if (events.length === 0) return out;
+
+  const floor = Math.max(minMs, 0);
+  // Index-carrying view so results can be written back in input order.
+  const items = events.map((e, i) => {
+    const start = e.starts_at;
+    const end = Math.max(e.ends_at, start + floor);
+    return { i, start, end };
+  });
+
+  items.sort((a, b) => a.start - b.start || b.end - a.end || a.i - b.i);
+
+  // Members of the cluster currently being built, and when each column last freed up.
+  let cluster: number[] = [];
+  let colEnds: number[] = [];
+  let clusterEnd = -Infinity;
+
+  const flush = () => {
+    const n = colEnds.length || 1;
+    for (const idx of cluster) out[idx].columns = n;
+    cluster = [];
+    colEnds = [];
+    clusterEnd = -Infinity;
+  };
+
+  for (const it of items) {
+    // Nothing in the open cluster is still running: start a fresh one.
+    if (it.start >= clusterEnd) flush();
+
+    let col = colEnds.findIndex((end) => end <= it.start);
+    if (col === -1) {
+      col = colEnds.length;
+      colEnds.push(it.end);
+    } else {
+      colEnds[col] = it.end;
+    }
+
+    out[it.i].column = col;
+    cluster.push(it.i);
+    if (it.end > clusterEnd) clusterEnd = it.end;
+  }
+  flush();
+
+  return out;
+}
+
+/**
+ * Where blocks are drawn once every one is at least `minPx` tall: within a column, a block whose
+ * true top falls under the short block above it is pushed down past that block (plus `gapPx`),
+ * keeping its true bottom, so a quarter-hour keeps its name and the meeting after it still ends
+ * on time. Columns come from true times (`layoutColumns`), so this never widens the layout.
+ */
+export function placeBlocks(
+  spans: { top: number; bottom: number }[],
+  slots: ColumnSlot[],
+  minPx: number,
+  gapPx: number,
+): { top: number; height: number }[] {
+  const out = spans.map((s) => ({ top: s.top, height: Math.max(s.bottom - s.top, minPx) }));
+  const byColumn = new Map<number, number[]>();
+  spans.forEach((_, i) => {
+    const col = slots[i]?.column ?? 0;
+    byColumn.set(col, [...(byColumn.get(col) ?? []), i]);
+  });
+  for (const idx of byColumn.values()) {
+    idx.sort((a, b) => spans[a].top - spans[b].top || spans[b].bottom - spans[a].bottom);
+    let prevBottom = -Infinity;
+    for (const i of idx) {
+      const top = Math.max(spans[i].top, prevBottom + gapPx);
+      const height = Math.max(spans[i].bottom - top, minPx);
+      out[i] = { top, height };
+      prevBottom = top + height;
+    }
+  }
+  return out;
+}
+
+export { MINUTE, MIN_SLOT };

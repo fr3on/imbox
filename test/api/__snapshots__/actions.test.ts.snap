@@ -1,0 +1,2960 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Reply Later and Set Aside > each turns on and off, and turning one on turns the other off > reply later again 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 1,
+        "rl_at": true,
+        "sa_at": true,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`Reply Later and Set Aside > each turns on and off, and turning one on turns the other off > reply later off 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": true,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`Reply Later and Set Aside > each turns on and off, and turning one on turns the other off > reply later on 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 1,
+        "rl_at": true,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`Reply Later and Set Aside > each turns on and off, and turning one on turns the other off > set aside off 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`Reply Later and Set Aside > each turns on and off, and turning one on turns the other off > set aside on, reply later off 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": true,
+        "sa_at": true,
+        "seen": 0,
+        "set_aside": 1,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`bubbling up > sets a time in the future, clears it, and refuses a past or odd time > cleared 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`bubbling up > sets a time in the future, clears it, and refuses a past or odd time > future 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": 4102444800000,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`bubbling up > sets a time in the future, clears it, and refuses a past or odd time > not a number 1`] = `
+{
+  "answer": {
+    "body": {
+      "error": "invalid_time",
+    },
+    "status": 400,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`bubbling up > sets a time in the future, clears it, and refuses a past or odd time > past 1`] = `
+{
+  "answer": {
+    "body": {
+      "error": "invalid_time",
+    },
+    "status": 400,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`bundling > bundles and unbundles the sender, and starts a contact when there is none > bundle 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 1,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`bundling > bundles and unbundles the sender, and starts a contact when there is none > new contact 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "paper_trail",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "New sender",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 1,
+        "email": "fresh@example.org",
+      },
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-21",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "paper_trail",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"fresh@example.org","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "New sender",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`bundling > bundles and unbundles the sender, and starts a contact when there is none > unbundle 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`deleting > removes the thread, what hangs off it and the threads merged into it, and trashes them at Gmail 1`] = `
+{
+  "answer": {
+    "body": {
+      "deleted": true,
+      "ok": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [
+      "POST threads/<t>/trash",
+      "POST threads/gkid/trash",
+    ],
+    "labels": [],
+    "messages": [],
+    "threads": [],
+  },
+}
+`;
+
+exports[`labels and collections > adds and removes collections > add 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [
+      {
+        "name": "C-ua",
+      },
+    ],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`labels and collections > adds and removes collections > remove 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`labels and collections > adds and removes labels, ignoring a label that is not the user's > add 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [
+      {
+        "name": "L-ua",
+      },
+    ],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`labels and collections > adds and removes labels, ignoring a label that is not the user's > add again 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [
+      {
+        "name": "L-ua",
+      },
+    ],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`labels and collections > adds and removes labels, ignoring a label that is not the user's > nothing 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`labels and collections > adds and removes labels, ignoring a label that is not the user's > remove 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`many threads at once > applies one action to each thread, counts those it did, and skips what is not the user's > merge refused 1`] = `
+{
+  "body": {
+    "error": "use_thread_action",
+  },
+  "status": 400,
+}
+`;
+
+exports[`many threads at once > applies one action to each thread, counts those it did, and skips what is not the user's > move 1`] = `
+{
+  "body": {
+    "count": 2,
+    "ok": true,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+      {
+        "gmail_message_id": "g-m-9",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "feed",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "feed",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"gm@example.org","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "On Gmail",
+        "unread": 1,
+      },
+    ],
+  },
+  "status": 200,
+}
+`;
+
+exports[`many threads at once > applies one action to each thread, counts those it did, and skips what is not the user's > none 1`] = `
+{
+  "body": {
+    "error": "no_threads",
+  },
+  "status": 400,
+}
+`;
+
+exports[`many threads at once > empties the trash for good, and only the trash 1`] = `
+{
+  "body": {
+    "deleted": 2,
+    "ok": true,
+  },
+  "kept": 2,
+  "left": 0,
+  "status": 200,
+}
+`;
+
+exports[`merging > folds other threads of the same mailbox into this one, and counts them 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-13",
+        "unread": 1,
+      },
+      {
+        "gmail_message_id": "g-m-15",
+        "unread": 1,
+      },
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": 1,
+        "has_attachments": 0,
+        "last_message_at": 1,
+        "merged": true,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Child",
+        "unread": 0,
+      },
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": 5,
+        "has_attachments": 1,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 8,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"},{"email":"a@example.org","name":"Sender"},{"email":"b@example.org","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": 5,
+        "has_attachments": 1,
+        "last_message_at": "<now>",
+        "merged": true,
+        "message_count": 3,
+        "note": "",
+        "participants_json": "[{"email":"a@example.org","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Merge A",
+        "unread": 1,
+      },
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": true,
+        "message_count": 4,
+        "note": "",
+        "participants_json": "[{"email":"b@example.org","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Merge B",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`merging > keeps the attachment flag of the thread it merges into 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-17",
+        "unread": 1,
+      },
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 1,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 2,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"},{"email":"plain@example.org","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": true,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"plain@example.org","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Plain",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`merging > refuses an empty list, a list of itself, and threads that are not found or on another mailbox > empty 1`] = `
+{
+  "answer": {
+    "body": {
+      "error": "no_threads",
+    },
+    "status": 400,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`merging > refuses an empty list, a list of itself, and threads that are not found or on another mailbox > missing 1`] = `
+{
+  "answer": {
+    "body": {
+      "error": "not_found",
+    },
+    "status": 404,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`merging > refuses an empty list, a list of itself, and threads that are not found or on another mailbox > other mailbox 1`] = `
+{
+  "answer": {
+    "body": {
+      "error": "not_found",
+    },
+    "status": 404,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-19",
+        "unread": 1,
+      },
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Other mailbox",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`merging > refuses an empty list, a list of itself, and threads that are not found or on another mailbox > self 1`] = `
+{
+  "answer": {
+    "body": {
+      "error": "no_threads",
+    },
+    "status": 400,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`moving > does not call Gmail for a mailbox that is not Gmail 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "trash",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "trash",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`moving > moves to each place, and refuses another > feed 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "feed",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "feed",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`moving > moves to each place, and refuses another > imbox 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`moving > moves to each place, and refuses another > invalid 1`] = `
+{
+  "answer": {
+    "body": {
+      "error": "invalid_bucket",
+    },
+    "status": 400,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`moving > moves to each place, and refuses another > none 1`] = `
+{
+  "answer": {
+    "body": {
+      "error": "invalid_bucket",
+    },
+    "status": 400,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`moving > moves to each place, and refuses another > paper_trail 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "paper_trail",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "paper_trail",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`moving > moves to each place, and refuses another > screened_out 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "screened_out",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "screened_out",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`moving > moves to each place, and refuses another > screener 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "screener",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "screener",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`moving > trashing clears Reply Later and Set Aside, and tells Gmail; moving back out tells Gmail too > no call 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "feed",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "On Gmail",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [
+      "POST threads/<t>/trash",
+      "POST threads/<t>/untrash",
+    ],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-9",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "feed",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"gm@example.org","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": true,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "On Gmail",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`moving > trashing clears Reply Later and Set Aside, and tells Gmail; moving back out tells Gmail too > trash 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "trash",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "On Gmail",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [
+      "POST threads/<t>/trash",
+    ],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-9",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "trash",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"gm@example.org","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": true,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "On Gmail",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`moving > trashing clears Reply Later and Set Aside, and tells Gmail; moving back out tells Gmail too > untrash 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "On Gmail",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [
+      "POST threads/<t>/trash",
+      "POST threads/<t>/untrash",
+    ],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-9",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"gm@example.org","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": true,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "On Gmail",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`naming and noting > keeps a note, cut at its limit, and clears it > length 1`] = `10000`;
+
+exports[`naming and noting > keeps a note, cut at its limit, and clears it > not text 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`naming and noting > keeps a note, cut at its limit, and clears it > set 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "call back",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`naming and noting > renames, trims, clears and cuts a long name > blank 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`naming and noting > renames, trims, clears and cuts a long name > long 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`naming and noting > renames, trims, clears and cuts a long name > not text 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`naming and noting > renames, trims, clears and cuts a long name > null 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`naming and noting > renames, trims, clears and cuts a long name > set 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Plan B",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": "Plan B",
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`reading and unreading > marks unread, read and seen > read 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": true,
+      "subject": "Mail of ua",
+      "unread": false,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 0,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 1,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 0,
+      },
+    ],
+  },
+}
+`;
+
+exports[`reading and unreading > marks unread, read and seen > seen 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": true,
+      "subject": "Mail of ua",
+      "unread": false,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 0,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 1,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 0,
+      },
+    ],
+  },
+}
+`;
+
+exports[`reading and unreading > marks unread, read and seen > unread 1`] = `
+{
+  "answer": {
+    "body": {
+      "bucket": "imbox",
+      "id": "<thread>",
+      "seen": false,
+      "subject": "Mail of ua",
+      "unread": true,
+    },
+    "status": 200,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`refusals > answers an unknown action, a missing thread and another user's thread > missing 1`] = `
+{
+  "body": {
+    "error": "not_found",
+  },
+  "status": 404,
+}
+`;
+
+exports[`refusals > answers an unknown action, a missing thread and another user's thread > signed out 1`] = `
+{
+  "body": {
+    "error": "unauthorized",
+  },
+  "status": 401,
+}
+`;
+
+exports[`refusals > answers an unknown action, a missing thread and another user's thread > unknown 1`] = `
+{
+  "answer": {
+    "body": {
+      "error": "unknown_action",
+    },
+    "status": 400,
+  },
+  "rows": {
+    "clips": [
+      {
+        "text": "worth keeping ua",
+      },
+    ],
+    "collections": [],
+    "contacts": [
+      {
+        "bundled": 0,
+        "email": "sender@example.com",
+      },
+    ],
+    "gmail": [],
+    "labels": [],
+    "messages": [
+      {
+        "gmail_message_id": "g-m-2",
+        "unread": 1,
+      },
+    ],
+    "threads": [
+      {
+        "bubble_up_at": null,
+        "bubbled": 0,
+        "bucket": "imbox",
+        "custom_subject": null,
+        "first_message_at": "<now>",
+        "has_attachments": 0,
+        "last_message_at": "<now>",
+        "merged": false,
+        "message_count": 1,
+        "note": "",
+        "participants_json": "[{"email":"sender@example.com","name":"Sender"}]",
+        "reply_later": 0,
+        "rl_at": false,
+        "sa_at": false,
+        "seen": 0,
+        "set_aside": 0,
+        "subject": "Mail of ua",
+        "unread": 1,
+      },
+    ],
+  },
+}
+`;

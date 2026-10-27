@@ -1,0 +1,23 @@
+[Unit]
+Description=Imbox (mail client)
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=imbox
+Group=imbox
+WorkingDirectory=/opt/imbox/current
+EnvironmentFile=/etc/imbox/imbox.env
+ExecStart=/usr/bin/node server/run.mjs
+Restart=on-failure
+RestartSec=3
+# The app only needs to write under /var/lib/imbox; everything else is locked down.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/imbox
+
+[Install]
+WantedBy=multi-user.target

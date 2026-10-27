@@ -1,0 +1,83 @@
+name: CI
+
+# Pushes to main are tested by the deploy workflow, so this one runs for pull requests, and for a release (workflow_call).
+# Dependabot's pull requests are skipped (each job has the same `if`). A skipped job counts as passed for branch protection, and the update is
+# tested by the deploy workflow once it is merged to main.
+on:
+  pull_request:
+  # The release workflow runs the same checks on the tagged commit.
+  workflow_call:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+# Runner: with the repository variable CI_RUNNER set to "lab", these jobs run on the self-hosted lab runners.
+# With it unset (or deleted) they run on GitHub-hosted runners, so CI keeps working when the lab server is off.
+jobs:
+  check:
+    if: github.actor != 'dependabot[bot]'
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm run lint
+
+  test:
+    if: github.actor != 'dependabot[bot]'
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: inbox
+          POSTGRES_HOST_AUTH_METHOD: trust
+          POSTGRES_DB: inbox_test
+        ports: ["54329:5432"]
+        options: >-
+          --health-cmd "pg_isready -U inbox" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      PG_TEST_URL: postgres://inbox@localhost:54329/inbox_test
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx vitest run --shard=${{ matrix.shard }}/3
+
+  # The build, the server's own tests on PostgreSQL (they start the whole server), and the Node-only tests.
+  build:
+    if: github.actor != 'dependabot[bot]'
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: inbox
+          POSTGRES_HOST_AUTH_METHOD: trust
+          POSTGRES_DB: inbox_test
+        ports: ["54329:5432"]
+        options: >-
+          --health-cmd "pg_isready -U inbox" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      PG_TEST_URL: postgres://inbox@localhost:54329/inbox_test
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build:node
+      - run: npm run test:pg

@@ -1,0 +1,19 @@
+# What you need to run the tests: a PostgreSQL on port 54329. `docker compose -f docker-compose.dev.yml up -d db`, then `npm test`.
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: inbox
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_DB: inbox_test
+    ports:
+      - "127.0.0.1:54329:5432"
+    # The tests make and drop their own databases, so nothing here needs to be kept.
+    tmpfs:
+      - /var/lib/postgresql/data
+    command: ["postgres", "-c", "fsync=off", "-c", "synchronous_commit=off", "-c", "full_page_writes=off", "-c", "max_connections=200"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U inbox"]
+      interval: 3s
+      timeout: 3s
+      retries: 20

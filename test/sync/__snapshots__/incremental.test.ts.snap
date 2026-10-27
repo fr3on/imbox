@@ -1,0 +1,465 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`the cursor > leaves the cursor alone when nothing happened, and logs nothing 1`] = `
+{
+  "history_id": "100",
+  "log": [],
+  "messages": [],
+  "threads": [],
+}
+`;
+
+exports[`the cursor > moves to where the mailbox now is when it read everything > calls 1`] = `
+[
+  "history?startHistoryId=100&maxResults=500&historyTypes=messageAdded&historyTypes=messageDeleted&historyTypes=labelAdded&historyTypes=labelRemoved",
+  "https://cloudflare-dns.com/dns-query?name=default._bimi.example.org&type=TXT",
+  "https://www.gravatar.com/avatar/22e7ba7a5786d8fb02a3b39893ae2176a995d052f816741a37e747565de7f45d?d=404&s=160",
+  "https://example.org/apple-touch-icon.png",
+  "https://example.org/favicon.ico",
+  "https://www.example.org/apple-touch-icon.png",
+  "https://www.example.org/favicon.ico",
+]
+`;
+
+exports[`the cursor > moves to where the mailbox now is when it read everything 1`] = `
+{
+  "history_id": "200",
+  "log": [
+    {
+      "level": "info",
+      "message": "Incremental sync: +2 msgs, -0 deleted, 0 label changes",
+    },
+  ],
+  "messages": [
+    {
+      "gmail_message_id": "m101",
+      "unread": 1,
+    },
+    {
+      "gmail_message_id": "m102",
+      "unread": 1,
+    },
+  ],
+  "threads": [
+    {
+      "bucket": "screener",
+      "gmail_thread_id": "t101",
+      "message_count": 1,
+      "seen": 0,
+      "unread": 1,
+    },
+    {
+      "bucket": "screener",
+      "gmail_thread_id": "t102",
+      "message_count": 1,
+      "seen": 0,
+      "unread": 1,
+    },
+  ],
+}
+`;
+
+exports[`the cursor > starts at the mailbox's current point when there is none > calls 1`] = `
+[
+  "profile",
+]
+`;
+
+exports[`the cursor > starts at the mailbox's current point when there is none 1`] = `
+{
+  "history_id": "777",
+  "log": [],
+  "messages": [],
+  "threads": [],
+}
+`;
+
+exports[`what changed > applies UNREAD added and removed, and reopens the Imbox flag when the last unread message is read > all read 1`] = `
+{
+  "history_id": "920",
+  "log": [
+    {
+      "level": "info",
+      "message": "Incremental sync: +2 msgs, -0 deleted, 0 label changes",
+    },
+    {
+      "level": "info",
+      "message": "Incremental sync: +0 msgs, -0 deleted, 1 label changes",
+    },
+    {
+      "level": "info",
+      "message": "Incremental sync: +0 msgs, -0 deleted, 1 label changes",
+    },
+  ],
+  "messages": [
+    {
+      "gmail_message_id": "m101",
+      "unread": 0,
+    },
+    {
+      "gmail_message_id": "m102",
+      "unread": 0,
+    },
+  ],
+  "threads": [
+    {
+      "bucket": "screener",
+      "gmail_thread_id": "tu",
+      "message_count": 2,
+      "seen": 1,
+      "unread": 0,
+    },
+  ],
+}
+`;
+
+exports[`what changed > applies UNREAD added and removed, and reopens the Imbox flag when the last unread message is read > one read 1`] = `
+{
+  "history_id": "910",
+  "log": [
+    {
+      "level": "info",
+      "message": "Incremental sync: +2 msgs, -0 deleted, 0 label changes",
+    },
+    {
+      "level": "info",
+      "message": "Incremental sync: +0 msgs, -0 deleted, 1 label changes",
+    },
+  ],
+  "messages": [
+    {
+      "gmail_message_id": "m101",
+      "unread": 0,
+    },
+    {
+      "gmail_message_id": "m102",
+      "unread": 1,
+    },
+  ],
+  "threads": [
+    {
+      "bucket": "screener",
+      "gmail_thread_id": "tu",
+      "message_count": 2,
+      "seen": 0,
+      "unread": 1,
+    },
+  ],
+}
+`;
+
+exports[`what changed > applies UNREAD added and removed, and reopens the Imbox flag when the last unread message is read > unread again 1`] = `
+{
+  "history_id": "930",
+  "log": [
+    {
+      "level": "info",
+      "message": "Incremental sync: +2 msgs, -0 deleted, 0 label changes",
+    },
+    {
+      "level": "info",
+      "message": "Incremental sync: +0 msgs, -0 deleted, 1 label changes",
+    },
+    {
+      "level": "info",
+      "message": "Incremental sync: +0 msgs, -0 deleted, 1 label changes",
+    },
+    {
+      "level": "info",
+      "message": "Incremental sync: +0 msgs, -0 deleted, 1 label changes",
+    },
+  ],
+  "messages": [
+    {
+      "gmail_message_id": "m101",
+      "unread": 1,
+    },
+    {
+      "gmail_message_id": "m102",
+      "unread": 0,
+    },
+  ],
+  "threads": [
+    {
+      "bucket": "screener",
+      "gmail_thread_id": "tu",
+      "message_count": 2,
+      "seen": 1,
+      "unread": 1,
+    },
+  ],
+}
+`;
+
+exports[`what changed > lets the later of two label changes on one message win 1`] = `
+{
+  "history_id": "910",
+  "log": [
+    {
+      "level": "info",
+      "message": "Incremental sync: +1 msgs, -0 deleted, 0 label changes",
+    },
+    {
+      "level": "info",
+      "message": "Incremental sync: +0 msgs, -0 deleted, 1 label changes",
+    },
+  ],
+  "messages": [
+    {
+      "gmail_message_id": "m101",
+      "unread": 1,
+    },
+  ],
+  "threads": [
+    {
+      "bucket": "screener",
+      "gmail_thread_id": "tl",
+      "message_count": 1,
+      "seen": 0,
+      "unread": 1,
+    },
+  ],
+}
+`;
+
+exports[`what changed > removes a deleted message, recounts its thread, and drops a thread left empty 1`] = `
+{
+  "history_id": "910",
+  "log": [
+    {
+      "level": "info",
+      "message": "Incremental sync: +3 msgs, -0 deleted, 0 label changes",
+    },
+    {
+      "level": "info",
+      "message": "Incremental sync: +0 msgs, -2 deleted, 0 label changes",
+    },
+  ],
+  "messages": [
+    {
+      "gmail_message_id": "m101",
+      "unread": 1,
+    },
+  ],
+  "threads": [
+    {
+      "bucket": "screener",
+      "gmail_thread_id": "tx",
+      "message_count": 1,
+      "seen": 0,
+      "unread": 1,
+    },
+  ],
+}
+`;
+
+exports[`what changed > skips spam, and forgets a message that was deleted in the same pass 1`] = `
+{
+  "history_id": "900",
+  "log": [
+    {
+      "level": "info",
+      "message": "Incremental sync: +1 msgs, -1 deleted, 0 label changes",
+    },
+  ],
+  "messages": [
+    {
+      "gmail_message_id": "m102",
+      "unread": 1,
+    },
+  ],
+  "threads": [
+    {
+      "bucket": "screener",
+      "gmail_thread_id": "t102",
+      "message_count": 1,
+      "seen": 0,
+      "unread": 1,
+    },
+  ],
+}
+`;
+
+exports[`what changed > trashes a thread, and takes it out of the trash into the place its sender's status gives > restored 1`] = `
+{
+  "history_id": "920",
+  "log": [
+    {
+      "level": "info",
+      "message": "Incremental sync: +4 msgs, -0 deleted, 0 label changes",
+    },
+    {
+      "level": "info",
+      "message": "Incremental sync: +0 msgs, -0 deleted, 4 label changes",
+    },
+    {
+      "level": "info",
+      "message": "Incremental sync: +0 msgs, -0 deleted, 4 label changes",
+    },
+  ],
+  "messages": [
+    {
+      "gmail_message_id": "m101",
+      "unread": 1,
+    },
+    {
+      "gmail_message_id": "m102",
+      "unread": 1,
+    },
+    {
+      "gmail_message_id": "m103",
+      "unread": 1,
+    },
+    {
+      "gmail_message_id": "m104",
+      "unread": 1,
+    },
+  ],
+  "threads": [
+    {
+      "bucket": "feed",
+      "gmail_thread_id": "th-feed",
+      "message_count": 1,
+      "seen": 0,
+      "unread": 1,
+    },
+    {
+      "bucket": "imbox",
+      "gmail_thread_id": "th-imbox",
+      "message_count": 1,
+      "seen": 0,
+      "unread": 1,
+    },
+    {
+      "bucket": "screener",
+      "gmail_thread_id": "th-pending",
+      "message_count": 1,
+      "seen": 0,
+      "unread": 1,
+    },
+    {
+      "bucket": "screened_out",
+      "gmail_thread_id": "th-screened_out",
+      "message_count": 1,
+      "seen": 0,
+      "unread": 1,
+    },
+  ],
+}
+`;
+
+exports[`what changed > trashes a thread, and takes it out of the trash into the place its sender's status gives > trashed 1`] = `
+{
+  "history_id": "910",
+  "log": [
+    {
+      "level": "info",
+      "message": "Incremental sync: +4 msgs, -0 deleted, 0 label changes",
+    },
+    {
+      "level": "info",
+      "message": "Incremental sync: +0 msgs, -0 deleted, 4 label changes",
+    },
+  ],
+  "messages": [
+    {
+      "gmail_message_id": "m101",
+      "unread": 1,
+    },
+    {
+      "gmail_message_id": "m102",
+      "unread": 1,
+    },
+    {
+      "gmail_message_id": "m103",
+      "unread": 1,
+    },
+    {
+      "gmail_message_id": "m104",
+      "unread": 1,
+    },
+  ],
+  "threads": [
+    {
+      "bucket": "trash",
+      "gmail_thread_id": "th-feed",
+      "message_count": 1,
+      "seen": 0,
+      "unread": 1,
+    },
+    {
+      "bucket": "trash",
+      "gmail_thread_id": "th-imbox",
+      "message_count": 1,
+      "seen": 0,
+      "unread": 1,
+    },
+    {
+      "bucket": "trash",
+      "gmail_thread_id": "th-pending",
+      "message_count": 1,
+      "seen": 0,
+      "unread": 1,
+    },
+    {
+      "bucket": "trash",
+      "gmail_thread_id": "th-screened_out",
+      "message_count": 1,
+      "seen": 0,
+      "unread": 1,
+    },
+  ],
+}
+`;
+
+exports[`when the history has expired > lists the last week again, stores it, and takes a new cursor > calls 1`] = `
+[
+  "history?startHistoryId=100&maxResults=500&historyTypes=messageAdded&historyTypes=messageDeleted&historyTypes=labelAdded&historyTypes=labelRemoved",
+  "messages?maxResults=100&q=-in%3Aspam%20-in%3Atrash%20newer_than%3A7d",
+  "https://cloudflare-dns.com/dns-query?name=default._bimi.example.org&type=TXT",
+  "https://www.gravatar.com/avatar/22e7ba7a5786d8fb02a3b39893ae2176a995d052f816741a37e747565de7f45d?d=404&s=160",
+  "https://example.org/apple-touch-icon.png",
+  "https://example.org/favicon.ico",
+  "https://www.example.org/apple-touch-icon.png",
+  "https://www.example.org/favicon.ico",
+  "profile",
+]
+`;
+
+exports[`when the history has expired > lists the last week again, stores it, and takes a new cursor 1`] = `
+{
+  "history_id": "777",
+  "log": [
+    {
+      "level": "warn",
+      "message": "History expired; re-listing last 7 days",
+    },
+  ],
+  "messages": [
+    {
+      "gmail_message_id": "m201",
+      "unread": 1,
+    },
+    {
+      "gmail_message_id": "m202",
+      "unread": 1,
+    },
+  ],
+  "threads": [
+    {
+      "bucket": "screener",
+      "gmail_thread_id": "t201",
+      "message_count": 1,
+      "seen": 0,
+      "unread": 1,
+    },
+    {
+      "bucket": "screener",
+      "gmail_thread_id": "t202",
+      "message_count": 1,
+      "seen": 0,
+      "unread": 1,
+    },
+  ],
+}
+`;

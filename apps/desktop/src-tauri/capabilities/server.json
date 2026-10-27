@@ -1,0 +1,28 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "server",
+  "description": "The imbox web app the person chose. Each command also checks that the window is on the saved server before it acts.",
+  "windows": [
+    "main"
+  ],
+  "remote": {
+    "urls": [
+      "https://*",
+      "http://localhost:*",
+      "http://127.0.0.1:*"
+    ]
+  },
+  "permissions": [
+    "core:event:default",
+    "core:window:allow-start-dragging",
+    "core:window:allow-internal-toggle-maximize",
+    "notification:allow-is-permission-granted",
+    "notification:allow-request-permission",
+    "allow-set-badge",
+    "allow-notify",
+    "allow-take-pending-url",
+    "allow-open-external",
+    "allow-check-update",
+    "allow-install-update"
+  ]
+}

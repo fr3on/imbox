@@ -1,0 +1,174 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`baseStyle > follows the app theme for a plain message, in light and in dark > dark 1`] = `
+"
+  html{color-scheme:dark;}
+  html,body{margin:0;padding:0;background:transparent;}
+  body{display:flow-root;font-family:"Geist Variable",Geist,system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.6;color:#eeeeee;word-wrap:break-word;overflow-wrap:anywhere;}
+  img{max-width:100% !important;height:auto;}
+  table{max-width:100% !important;}
+  a{color:#eeeeee;text-decoration:underline;text-underline-offset:2px;}
+  blockquote{border-left:2px solid #333333;margin:.5em 0;padding-left:1em;color:#999999;}
+  pre{white-space:pre-wrap;font-family:"Geist Mono Variable","Geist Mono",ui-monospace,Menlo,monospace;font-size:12.5px;}
+  ::selection{background:#eeeeee;color:#101010;}
+  .imbox-quoted-hidden{display:none !important;}
+
+  /* Option B: Quiet strip for conference meetings */
+  .strip-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 13px;border:1px solid #333333;border-radius:8px;background:rgba(255,255,255,0.03);margin:16px 0;box-sizing:border-box;flex-wrap:wrap;}
+  .strip-left{display:flex;align-items:center;gap:10px;font-size:13px;min-width:0;flex-wrap:wrap;}
+  .strip-title{font-weight:600;color:#eeeeee;letter-spacing:-0.01em;}
+  .strip-info{display:flex;align-items:center;gap:10px;color:#999999;font-size:12px;font-family:"Geist Mono Variable","Geist Mono",ui-monospace,Menlo,monospace;}
+  .strip-copy-btn{border:1px solid #333333;background:transparent;color:#999999;font-size:10.5px;padding:1px 6px;border-radius:4px;cursor:pointer;font-family:inherit;}
+  .strip-copy-btn:hover{color:#eeeeee;border-color:#eeeeee;}
+  .strip-join{border:1px solid #eeeeee;background:#eeeeee;color:#101010 !important;padding:5px 13px;border-radius:6px;font-size:12px;font-weight:500;text-decoration:none !important;white-space:nowrap;cursor:pointer;flex-shrink:0;transition:opacity .15s ease;}
+  .strip-join:hover{opacity:.88;}
+  .strip-details{width:100%;margin-top:6px;font-size:11.5px;color:#999999;}
+  .strip-details summary{cursor:pointer;color:#999999;outline:none;}
+  .strip-details summary:hover{color:#eeeeee;}
+
+  /* Caution & sensitivity banners */
+  .caution-banner-subtle{border:1px solid rgba(239,68,68,.25) !important;border-left:3px solid #ef4444 !important;background:rgba(239,68,68,.08) !important;padding:6px 10px !important;border-radius:6px !important;font-size:11.5px !important;line-height:1.4 !important;color:#999999 !important;margin:12px 0 !important;}
+  .caution-banner-subtle *{font-size:11.5px !important;font-weight:normal !important;color:inherit !important;}
+  .caution-banner-subtle b,.caution-banner-subtle strong{font-weight:600 !important;color:#eeeeee !important;}
+  .email-sensitivity-label{display:inline-block !important;font-size:11px !important;font-weight:500 !important;color:#999999 !important;background:rgba(255,255,255,.06) !important;border:1px solid #333333 !important;padding:1px 8px !important;border-radius:999px !important;margin-bottom:8px !important;letter-spacing:normal !important;}
+
+  /* Outlook & divider normalization */
+  hr{border:0;border-top:1px solid #333333;margin:1.25rem 0;opacity:.5;}
+  p.MsoNormal,li.MsoNormal,div.MsoNormal{margin-bottom:.5em;}
+  p:empty, p.MsoNormal:empty{margin:0 !important;padding:0 !important;min-height:0 !important;}
+
+  /* Option A: Inline Quote Fold */
+  .inline-fold-bar{position:relative;display:flex;align-items:center;justify-content:center;margin:18px 0 12px;}
+  .inline-fold-bar::before{content:"";position:absolute;inset-inline:0;top:50%;border-top:1px dashed #333333;z-index:1;}
+  .inline-fold-btn{position:relative;z-index:2;background:#101010;border:1px solid #333333;border-radius:999px;padding:3px 12px;font-size:11.5px;color:#999999;display:inline-flex;align-items:center;gap:6px;cursor:pointer;font-family:inherit;transition:all .15s ease;}
+  .inline-fold-btn:hover{color:#eeeeee;border-color:#eeeeee;background:rgba(255,255,255,0.03);}
+  .inline-fold-btn .fold-chevron{width:13px;height:13px;stroke-width:2;stroke:currentColor;fill:none;transition:transform .15s ease;}
+  .inline-fold-btn.is-open .fold-chevron{transform:rotate(180deg);}
+  .inline-fold-btn .fold-badge{font-family:"Geist Mono Variable","Geist Mono",ui-monospace,Menlo,monospace;font-size:10.5px;background:rgba(255,255,255,0.03);border:1px solid #333333;padding:0 6px;border-radius:999px;color:#999999;}
+  
+  .outlook-quoted, blockquote, .gmail_quote{border-left:2px solid #333333 !important;padding-left:14px !important;margin-left:4px !important;margin-top:8px !important;}
+  .outlook-quoted.imbox-quoted-hidden, blockquote.imbox-quoted-hidden, .gmail_quote.imbox-quoted-hidden{display:none !important;}
+"
+`;
+
+exports[`baseStyle > follows the app theme for a plain message, in light and in dark > light 1`] = `
+"
+  html{color-scheme:light;}
+  html,body{margin:0;padding:0;background:transparent;}
+  body{display:flow-root;font-family:"Geist Variable",Geist,system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.6;color:#111111;word-wrap:break-word;overflow-wrap:anywhere;}
+  img{max-width:100% !important;height:auto;}
+  table{max-width:100% !important;}
+  a{color:#111111;text-decoration:underline;text-underline-offset:2px;}
+  blockquote{border-left:2px solid #dddddd;margin:.5em 0;padding-left:1em;color:#666666;}
+  pre{white-space:pre-wrap;font-family:"Geist Mono Variable","Geist Mono",ui-monospace,Menlo,monospace;font-size:12.5px;}
+  ::selection{background:#111111;color:#fefefe;}
+  .imbox-quoted-hidden{display:none !important;}
+
+  /* Option B: Quiet strip for conference meetings */
+  .strip-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 13px;border:1px solid #dddddd;border-radius:8px;background:rgba(55,53,47,0.03);margin:16px 0;box-sizing:border-box;flex-wrap:wrap;}
+  .strip-left{display:flex;align-items:center;gap:10px;font-size:13px;min-width:0;flex-wrap:wrap;}
+  .strip-title{font-weight:600;color:#111111;letter-spacing:-0.01em;}
+  .strip-info{display:flex;align-items:center;gap:10px;color:#666666;font-size:12px;font-family:"Geist Mono Variable","Geist Mono",ui-monospace,Menlo,monospace;}
+  .strip-copy-btn{border:1px solid #dddddd;background:transparent;color:#666666;font-size:10.5px;padding:1px 6px;border-radius:4px;cursor:pointer;font-family:inherit;}
+  .strip-copy-btn:hover{color:#111111;border-color:#111111;}
+  .strip-join{border:1px solid #111111;background:#111111;color:#fefefe !important;padding:5px 13px;border-radius:6px;font-size:12px;font-weight:500;text-decoration:none !important;white-space:nowrap;cursor:pointer;flex-shrink:0;transition:opacity .15s ease;}
+  .strip-join:hover{opacity:.88;}
+  .strip-details{width:100%;margin-top:6px;font-size:11.5px;color:#666666;}
+  .strip-details summary{cursor:pointer;color:#666666;outline:none;}
+  .strip-details summary:hover{color:#111111;}
+
+  /* Caution & sensitivity banners */
+  .caution-banner-subtle{border:1px solid rgba(239,68,68,.25) !important;border-left:3px solid #ef4444 !important;background:rgba(239,68,68,.05) !important;padding:6px 10px !important;border-radius:6px !important;font-size:11.5px !important;line-height:1.4 !important;color:#666666 !important;margin:12px 0 !important;}
+  .caution-banner-subtle *{font-size:11.5px !important;font-weight:normal !important;color:inherit !important;}
+  .caution-banner-subtle b,.caution-banner-subtle strong{font-weight:600 !important;color:#111111 !important;}
+  .email-sensitivity-label{display:inline-block !important;font-size:11px !important;font-weight:500 !important;color:#666666 !important;background:rgba(55,53,47,.06) !important;border:1px solid #dddddd !important;padding:1px 8px !important;border-radius:999px !important;margin-bottom:8px !important;letter-spacing:normal !important;}
+
+  /* Outlook & divider normalization */
+  hr{border:0;border-top:1px solid #dddddd;margin:1.25rem 0;opacity:.5;}
+  p.MsoNormal,li.MsoNormal,div.MsoNormal{margin-bottom:.5em;}
+  p:empty, p.MsoNormal:empty{margin:0 !important;padding:0 !important;min-height:0 !important;}
+
+  /* Option A: Inline Quote Fold */
+  .inline-fold-bar{position:relative;display:flex;align-items:center;justify-content:center;margin:18px 0 12px;}
+  .inline-fold-bar::before{content:"";position:absolute;inset-inline:0;top:50%;border-top:1px dashed #dddddd;z-index:1;}
+  .inline-fold-btn{position:relative;z-index:2;background:#fefefe;border:1px solid #dddddd;border-radius:999px;padding:3px 12px;font-size:11.5px;color:#666666;display:inline-flex;align-items:center;gap:6px;cursor:pointer;font-family:inherit;transition:all .15s ease;}
+  .inline-fold-btn:hover{color:#111111;border-color:#111111;background:rgba(55,53,47,0.03);}
+  .inline-fold-btn .fold-chevron{width:13px;height:13px;stroke-width:2;stroke:currentColor;fill:none;transition:transform .15s ease;}
+  .inline-fold-btn.is-open .fold-chevron{transform:rotate(180deg);}
+  .inline-fold-btn .fold-badge{font-family:"Geist Mono Variable","Geist Mono",ui-monospace,Menlo,monospace;font-size:10.5px;background:rgba(55,53,47,0.03);border:1px solid #dddddd;padding:0 6px;border-radius:999px;color:#666666;}
+  
+  .outlook-quoted, blockquote, .gmail_quote{border-left:2px solid #dddddd !important;padding-left:14px !important;margin-left:4px !important;margin-top:8px !important;}
+  .outlook-quoted.imbox-quoted-hidden, blockquote.imbox-quoted-hidden, .gmail_quote.imbox-quoted-hidden{display:none !important;}
+"
+`;
+
+exports[`baseStyle > keeps the light canvas for a message that paints its own background, even on the dark page > painted on dark 1`] = `
+"
+  html{color-scheme:light;}
+  html,body{margin:0;padding:0;background:transparent;}
+  body{display:flow-root;font-family:"Geist Variable",Geist,system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.6;color:#37352f;word-wrap:break-word;overflow-wrap:anywhere;}
+  img{max-width:100% !important;height:auto;}
+  table{max-width:100% !important;}
+  a{color:#37352f;text-decoration:underline;text-underline-offset:2px;}
+  blockquote{border-left:2px solid rgba(55,53,47,.12);margin:.5em 0;padding-left:1em;color:rgba(55,53,47,.65);}
+  pre{white-space:pre-wrap;font-family:"Geist Mono Variable","Geist Mono",ui-monospace,Menlo,monospace;font-size:12.5px;}
+  ::selection{background:#37352f;color:#ffffff;}
+  .imbox-quoted-hidden{display:none !important;}
+
+  /* Option B: Quiet strip for conference meetings */
+  .strip-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 13px;border:1px solid rgba(55,53,47,.12);border-radius:8px;background:#fbfbfa;margin:16px 0;box-sizing:border-box;flex-wrap:wrap;}
+  .strip-left{display:flex;align-items:center;gap:10px;font-size:13px;min-width:0;flex-wrap:wrap;}
+  .strip-title{font-weight:600;color:#37352f;letter-spacing:-0.01em;}
+  .strip-info{display:flex;align-items:center;gap:10px;color:rgba(55,53,47,.65);font-size:12px;font-family:"Geist Mono Variable","Geist Mono",ui-monospace,Menlo,monospace;}
+  .strip-copy-btn{border:1px solid rgba(55,53,47,.12);background:transparent;color:rgba(55,53,47,.65);font-size:10.5px;padding:1px 6px;border-radius:4px;cursor:pointer;font-family:inherit;}
+  .strip-copy-btn:hover{color:#37352f;border-color:#37352f;}
+  .strip-join{border:1px solid #37352f;background:#37352f;color:#ffffff !important;padding:5px 13px;border-radius:6px;font-size:12px;font-weight:500;text-decoration:none !important;white-space:nowrap;cursor:pointer;flex-shrink:0;transition:opacity .15s ease;}
+  .strip-join:hover{opacity:.88;}
+  .strip-details{width:100%;margin-top:6px;font-size:11.5px;color:rgba(55,53,47,.65);}
+  .strip-details summary{cursor:pointer;color:rgba(55,53,47,.65);outline:none;}
+  .strip-details summary:hover{color:#37352f;}
+
+  /* Caution & sensitivity banners */
+  .caution-banner-subtle{border:1px solid rgba(239,68,68,.25) !important;border-left:3px solid #ef4444 !important;background:rgba(239,68,68,.05) !important;padding:6px 10px !important;border-radius:6px !important;font-size:11.5px !important;line-height:1.4 !important;color:rgba(55,53,47,.65) !important;margin:12px 0 !important;}
+  .caution-banner-subtle *{font-size:11.5px !important;font-weight:normal !important;color:inherit !important;}
+  .caution-banner-subtle b,.caution-banner-subtle strong{font-weight:600 !important;color:#37352f !important;}
+  .email-sensitivity-label{display:inline-block !important;font-size:11px !important;font-weight:500 !important;color:rgba(55,53,47,.65) !important;background:rgba(55,53,47,.06) !important;border:1px solid rgba(55,53,47,.12) !important;padding:1px 8px !important;border-radius:999px !important;margin-bottom:8px !important;letter-spacing:normal !important;}
+
+  /* Outlook & divider normalization */
+  hr{border:0;border-top:1px solid rgba(55,53,47,.12);margin:1.25rem 0;opacity:.5;}
+  p.MsoNormal,li.MsoNormal,div.MsoNormal{margin-bottom:.5em;}
+  p:empty, p.MsoNormal:empty{margin:0 !important;padding:0 !important;min-height:0 !important;}
+
+  /* Option A: Inline Quote Fold */
+  .inline-fold-bar{position:relative;display:flex;align-items:center;justify-content:center;margin:18px 0 12px;}
+  .inline-fold-bar::before{content:"";position:absolute;inset-inline:0;top:50%;border-top:1px dashed rgba(55,53,47,.12);z-index:1;}
+  .inline-fold-btn{position:relative;z-index:2;background:#ffffff;border:1px solid rgba(55,53,47,.12);border-radius:999px;padding:3px 12px;font-size:11.5px;color:rgba(55,53,47,.65);display:inline-flex;align-items:center;gap:6px;cursor:pointer;font-family:inherit;transition:all .15s ease;}
+  .inline-fold-btn:hover{color:#37352f;border-color:#37352f;background:#fbfbfa;}
+  .inline-fold-btn .fold-chevron{width:13px;height:13px;stroke-width:2;stroke:currentColor;fill:none;transition:transform .15s ease;}
+  .inline-fold-btn.is-open .fold-chevron{transform:rotate(180deg);}
+  .inline-fold-btn .fold-badge{font-family:"Geist Mono Variable","Geist Mono",ui-monospace,Menlo,monospace;font-size:10.5px;background:#fbfbfa;border:1px solid rgba(55,53,47,.12);padding:0 6px;border-radius:999px;color:rgba(55,53,47,.65);}
+  
+  .outlook-quoted, blockquote, .gmail_quote{border-left:2px solid rgba(55,53,47,.12) !important;padding-left:14px !important;margin-left:4px !important;margin-top:8px !important;}
+  .outlook-quoted.imbox-quoted-hidden, blockquote.imbox-quoted-hidden, .gmail_quote.imbox-quoted-hidden{display:none !important;}
+"
+`;
+
+exports[`enhanceGmailQuotes > hides a quote behind a fold bar, and hides the line that introduced it 1`] = `"<p>Thanks!</p><div style="display:none" id="intro">On Mon, Sep 29, 2026 at 10:15 AM Alex Rivera &lt;alex@studio.test&gt; wrote:</div><div class="inline-fold-bar"><button type="button" class="inline-fold-btn" data-sender="Mon, Sep 29, 2026" data-action="Quoted" aria-expanded="false"><svg class="fold-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg><span class="fold-title">Quoted message from Mon, Sep 29, 2026</span><span class="fold-badge">10:15 AM</span></button></div><blockquote class="imbox-quoted-hidden" id="q"><p>Can we move it?</p></blockquote>"`;
+
+exports[`enhanceGmailQuotes > names no one when there is no introduction, and folds a gmail_quote div as well 1`] = `"<div class="inline-fold-bar"><button type="button" class="inline-fold-btn" data-sender="" data-action="Quoted" aria-expanded="false"><svg class="fold-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg><span class="fold-title">Quoted message</span></button></div><div class="gmail_quote imbox-quoted-hidden">earlier</div>"`;
+
+exports[`enhanceMeetingInvites > makes a Meet strip with the meeting code 1`] = `"<div class="strip-bar"><div class="strip-left"><span class="strip-title">Google Meet</span><div class="strip-info"><span>abc-defg-hij</span></div></div><a href="https://meet.google.com/abc-defg-hij" target="_blank" rel="noopener noreferrer" class="strip-join">Join meeting</a></div>"`;
+
+exports[`enhanceMeetingInvites > makes a Zoom strip from the meeting link, taking the passcode from the text 1`] = `"<p>Join</p><div class="strip-bar"><div class="strip-left"><span class="strip-title">Zoom Meeting</span><div class="strip-info"><span>ID: 8123456789</span><button type="button" class="strip-copy-btn" data-copy="8123456789">Copy</button><span>Pass: z00mPass</span><button type="button" class="strip-copy-btn" data-copy="z00mPass">Copy</button></div></div><a href="https://acme.zoom.us/j/8123456789" target="_blank" rel="noopener noreferrer" class="strip-join">Join meeting</a></div>"`;
+
+exports[`enhanceMeetingInvites > turns a Teams invite into a strip with the id, passcode and a join link, and the device details folded 1`] = `"<p>Agenda</p><div class="strip-bar"><div class="strip-left"><span class="strip-title">Teams Meeting</span><div class="strip-info"><span>ID: 123 456 789 01</span><button type="button" class="strip-copy-btn" data-copy="123 456 789 01">Copy</button><span>Pass: Ab3dEf</span><button type="button" class="strip-copy-btn" data-copy="Ab3dEf">Copy</button></div></div><a href="https://teams.microsoft.com/l/meetup-join/abc" target="_blank" rel="noopener noreferrer" class="strip-join">Join meeting</a><details class="strip-details"><summary>Device &amp; dial-in info</summary><div style="padding-top:4px;font-family:monospace;font-size:11px;"><div>Tenant key: tk-1</div><div>Video ID: 998 877 66</div></div></details></div>"`;
+
+exports[`wrapOutlookQuotes > finds a classic From/Sent/To header and a dashed Original Message line > from-sent-to 1`] = `"<p>Reply</p><div class="inline-fold-bar"><button type="button" class="inline-fold-btn" data-sender="Alex Rivera [mailto:alex@studio.test]" data-action="Quoted" aria-expanded="false"><svg class="fold-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg><span class="fold-title">Quoted message from Alex Rivera [mailto:alex@studio.test]</span><span class="fold-badge">09:00</span></button></div><div class="imbox-quote outlook-quoted imbox-quoted-hidden"><p>From: Alex Rivera [mailto:alex@studio.test]<br>Sent: Tuesday, 30 September 2026 09:00<br>To: Maya<br>Subject: Plan</p><p>Old</p></div>"`;
+
+exports[`wrapOutlookQuotes > finds a classic From/Sent/To header and a dashed Original Message line > original-message 1`] = `"<p>Reply</p><div class="inline-fold-bar"><button type="button" class="inline-fold-btn" data-sender="" data-action="Quoted" aria-expanded="false"><svg class="fold-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg><span class="fold-title">Quoted message</span></button></div><div class="imbox-quote outlook-quoted imbox-quoted-hidden"><p>-----Original Message-----</p><p>Old</p></div>"`;
+
+exports[`wrapOutlookQuotes > finds an unquoted 'On ... wrote:' line (the name is cut at the time, as for Gmail) 1`] = `"<p>Reply</p><div class="inline-fold-bar"><button type="button" class="inline-fold-btn" data-sender="Mon, Sep 29, 2026" data-action="Quoted" aria-expanded="false"><svg class="fold-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg><span class="fold-title">Quoted message from Mon, Sep 29, 2026</span><span class="fold-badge">10:15 AM</span></button></div><div class="imbox-quote outlook-quoted imbox-quoted-hidden"><div>On Mon, Sep 29, 2026 at 10:15 AM Alex Rivera wrote:</div><div>Old text</div></div>"`;
+
+exports[`wrapOutlookQuotes > includes a rule just above the header, and says Forwarded when the text says so 1`] = `"<p>FYI</p><div class="inline-fold-bar"><button type="button" class="inline-fold-btn" data-sender="Alex" data-action="Forwarded" aria-expanded="false"><svg class="fold-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg><span class="fold-title">Forwarded message from Alex</span><span class="fold-badge">10:15 AM</span></button></div><div class="imbox-quote outlook-quoted imbox-quoted-hidden"><hr><div id="divRplyFwdMsg">From: Alex<br>Sent: Monday 10:15 AM</div><p>---------- Forwarded message ----------</p></div>"`;
+
+exports[`wrapOutlookQuotes > wraps from the web-app reply block to the end, with a fold bar that names the sender and the time 1`] = `"<p>Sounds good.</p><div class="inline-fold-bar"><button type="button" class="inline-fold-btn" data-sender="Alex Rivera" data-action="Quoted" aria-expanded="false"><svg class="fold-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg><span class="fold-title">Quoted message from Alex Rivera</span><span class="fold-badge">10:15 AM</span></button></div><div class="imbox-quote outlook-quoted imbox-quoted-hidden"><div id="divRplyFwdMsg"><b>From:</b> Alex Rivera &lt;alex@studio.test&gt;<br><b>Sent:</b> Monday, September 29, 2026 10:15 AM<br><b>To:</b> Maya</div><p>Old text</p></div>"`;

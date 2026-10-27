@@ -1,0 +1,150 @@
+// The calendar half of the cron. Google calendars are incremental (a syncToken round trip) so they
+// run every invocation; ICS feeds are a whole-file download, so they wait out the hour.
+
+import { muteHex } from "@shared/color";
+import type { AccountRow } from "../db";
+import { now } from "../db";
+import type { Env } from "../env";
+import { Budget, UNLIMITED } from "../jobs";
+import { hasCalendarScope } from "../google";
+import { discoverCaldav } from "./caldav";
+import { ensureDefaultCalendars, syncCalendarNow } from "./sources";
+import type { CalendarRow } from "./types";
+
+/** How stale a subscribed feed has to be before it is worth re-downloading. */
+const ICS_INTERVAL_MS = 3600_000;
+/** A mailbox's calendar is checked often: it is a tag comparison, and a change made elsewhere should turn up soon. */
+const CALDAV_INTERVAL_MS = 120_000;
+
+/**
+ * A calendar the owner has unchecked is not on screen, so nothing is waiting on it being current.
+ * It still syncs — unchecking is not unsubscribing, and re-checking one should not face a cold
+ * start — but at a pace that matches how much anyone is looking at it. Turning one back on syncs
+ * it immediately, so this interval is never what the user waits for.
+ */
+const HIDDEN_INTERVAL_MS = 6 * 3600_000;
+/**
+ * One busy account must not starve the others, or eat the invocation's CPU on its own.
+ *
+ * Worth keeping above the number of calendars a user actually holds. Calendars are taken oldest
+ * `last_synced_at` first, and a poll that finds nothing no longer writes one, so past the cap a
+ * calendar only reaches the front of the queue as fast as the others' heartbeat writes push them
+ * to the back — every 10 minutes rather than every tick. Nothing starves, but the cadence the user
+ * asked for only holds while the cap covers them all.
+ */
+const MAX_PER_RUN = 40;
+
+/**
+ * A calendar whose last sync failed waits this long before it is tried again. Google calendars are otherwise due on every tick, and a failing
+ * one (access removed, the calendar deleted on Google's side, a quota error) wrote its error and a sync-log row once a minute for as long as
+ * the fault lasted, and spent a request a minute on it.
+ */
+const ERROR_RETRY_MS = 10 * 60_000;
+
+/** How long an account's calendar list may go unchecked before it is worth pulling again. */
+const LIST_INTERVAL_MS = 6 * 3600_000;
+
+/**
+ * Re-read a Google account's calendar list.
+ *
+ * It is pulled at consent, and if that call fails the account is left holding the scope with
+ * nothing to show and no way back — everything after it syncs calendars that already exist. So an
+ * account with no calendars is retried every run. An account that has some is re-read a few times a
+ * day, which is also how a calendar added on Google's side turns up here without being asked.
+ */
+async function discoverMissing(env: Env): Promise<void> {
+  const r = await env.DB.prepare(
+    `SELECT a.* FROM accounts a
+     WHERE a.provider = 'gmail' AND a.sync_status <> 'disconnected'
+       AND (NOT EXISTS (SELECT 1 FROM calendars c WHERE c.account_id = a.id)
+            OR COALESCE((SELECT MAX(c2.updated_at) FROM calendars c2 WHERE c2.account_id = a.id), 0) <= ?)
+     LIMIT 4`
+  )
+    .bind(now() - LIST_INTERVAL_MS)
+    .all<AccountRow>();
+  for (const acc of r.results) {
+    if (!hasCalendarScope(acc.scopes)) continue;
+    try {
+      await ensureDefaultCalendars(env, acc.user_id, acc);
+    } catch (e) {
+      console.error("calendar discovery failed", acc.email, e);
+    }
+  }
+}
+
+/**
+ * Pull any synced calendar colour into the muted band. Google's palette is built for pale chips
+ * with dark text; inbox fills the whole block and puts light text on it. `muteHex` is
+ * idempotent, so a colour already in the band is left untouched and this converges and stops —
+ * including for colours picked from the app's own palette, which are already muted.
+ */
+async function quietColours(env: Env): Promise<void> {
+  const r = await env.DB.prepare(`SELECT id, color FROM calendars WHERE source <> 'local' LIMIT 200`).all<{ id: string; color: string }>();
+  const stmts = [];
+  for (const row of r.results) {
+    const muted = muteHex(row.color);
+    if (!muted || muted === row.color.toLowerCase()) continue;
+    stmts.push(env.DB.prepare(`UPDATE calendars SET color = ?, updated_at = ? WHERE id = ?`).bind(muted, now(), row.id));
+  }
+  if (stmts.length) await env.DB.batch(stmts);
+}
+
+/** Cron entry point: refresh every calendar that is due. Never throws. */
+export async function runCalendarSync(env: Env, budget: Budget = UNLIMITED): Promise<void> {
+  const db = env.DB;
+  try {
+    await discoverMissing(env);
+  } catch (e) {
+    console.error("calendar discovery pass failed", e);
+  }
+  try {
+    await discoverCaldav(env);
+  } catch (e) {
+    console.error("caldav discovery pass failed", e);
+  }
+  try {
+    await quietColours(env);
+  } catch (e) {
+    console.error("calendar colour pass failed", e);
+  }
+  let due: CalendarRow[] = [];
+  try {
+    const t = now();
+    const r = await db
+      .prepare(
+        `SELECT c.* FROM calendars c
+         LEFT JOIN accounts a ON a.id = c.account_id
+         WHERE c.source <> 'local'
+           AND (c.account_id IS NULL OR (a.id IS NOT NULL AND a.sync_status <> 'disconnected'))
+           AND (c.sync_status <> 'error' OR COALESCE(c.last_synced_at, 0) <= ?)
+           AND (CASE
+                  WHEN c.visible = 0 THEN CASE WHEN COALESCE(c.last_synced_at, 0) <= ? THEN 1 ELSE 0 END
+                  WHEN c.source = 'google' THEN 1
+                  WHEN c.source = 'caldav' THEN CASE WHEN COALESCE(c.last_synced_at, 0) <= ? THEN 1 ELSE 0 END
+                  ELSE CASE WHEN COALESCE(c.last_synced_at, 0) <= ? THEN 1 ELSE 0 END
+                END) = 1
+         ORDER BY COALESCE(c.last_synced_at, 0) ASC
+         LIMIT ?`
+      )
+      .bind(t - ERROR_RETRY_MS, t - HIDDEN_INTERVAL_MS, t - CALDAV_INTERVAL_MS, t - ICS_INTERVAL_MS, MAX_PER_RUN)
+      .all<CalendarRow>();
+    due = r.results;
+  } catch (e) {
+    console.error("calendar sync: could not list calendars", e);
+    return;
+  }
+
+  // At most one full pull per tick — it is pages of Google requests and a page of reads each.
+  let fullUsed = false;
+  for (const cal of due) {
+    if (budget.spent) break; // what is left is still due, and goes first next time (oldest sync first)
+    // One unreachable feed must not take the rest of them down with it; syncCalendarNow has already
+    // recorded sync_error and a sync_log row by the time it throws.
+    try {
+      const r = await syncCalendarNow(env, cal, { allowFull: !fullUsed });
+      if (r.full) fullUsed = true;
+    } catch (e) {
+      console.error("calendar sync failed", cal.name, e);
+    }
+  }
+}

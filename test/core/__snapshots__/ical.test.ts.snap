@@ -1,0 +1,1206 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`reading a calendar > gives nothing for nothing, or for text that is not a calendar > empty 1`] = `
+{
+  "color": "",
+  "events": [],
+  "name": "",
+  "timezone": "",
+}
+`;
+
+exports[`reading a calendar > gives nothing for nothing, or for text that is not a calendar > text 1`] = `
+{
+  "color": "",
+  "events": [],
+  "name": "",
+  "timezone": "",
+}
+`;
+
+exports[`reading a calendar > gives nothing for nothing, or for text that is not a calendar > undefined 1`] = `
+{
+  "color": "",
+  "events": [],
+  "name": "",
+  "timezone": "",
+}
+`;
+
+exports[`reading a calendar > reads the calendar's own name, zone and colour, and skips what is not an event 1`] = `
+{
+  "color": "#FF2968",
+  "events": [
+    {
+      "allDay": false,
+      "attendees": [],
+      "busy": true,
+      "conferenceUrl": "",
+      "description": "",
+      "endDate": null,
+      "endsAt": 1767607200000,
+      "exdates": [],
+      "lastModified": null,
+      "location": "",
+      "organizer": null,
+      "recurrenceId": null,
+      "reminders": [],
+      "rrule": null,
+      "sequence": 0,
+      "startDate": null,
+      "startsAt": 1767603600000,
+      "status": "confirmed",
+      "summary": "Kept",
+      "tzid": "UTC",
+      "uid": "ok",
+      "url": "",
+    },
+  ],
+  "name": "Work, mostly",
+  "timezone": "Europe/Berlin",
+}
+`;
+
+exports[`reading a calendar > unfolds long lines, and reads escaped text 1`] = `
+[
+  [
+    "Line one
+Line two, with a comma; and a semi\\colon",
+    "Room 12, Building A",
+    "S",
+  ],
+]
+`;
+
+exports[`reminders > reads minutes before the start, sorted, once each, and ignores nonsense 1`] = `
+[
+  -120,
+  -0,
+  15,
+  60,
+  1440,
+]
+`;
+
+exports[`repeating events > always includes the seed as the first occurrence, even when the rule would not 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-06T09:00:00.000Z",
+  "2026-01-08T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > anchors all-day events in UTC, so a birthday never moves a day 1`] = `
+[
+  "2026-06-15T00:00:00.000Z",
+  "2027-06-15T00:00:00.000Z",
+]
+`;
+
+exports[`repeating events > counts from the seed even when the window starts later 1`] = `
+[
+  "2026-01-08T09:00:00.000Z",
+  "2026-01-09T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > gives just the seed for a rule it cannot read, and nothing for an impossible window > bad rule 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > gives just the seed for a rule it cannot read, and nothing for an impossible window > empty 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > gives just the seed for a rule it cannot read, and nothing for an impossible window > huge interval 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > gives just the seed for a rule it cannot read, and nothing for an impossible window > impossible day 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-06T09:00:00.000Z",
+  "2026-01-07T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > gives just the seed for a rule it cannot read, and nothing for an impossible window > no start 1`] = `[]`;
+
+exports[`repeating events > gives just the seed for a rule it cannot read, and nothing for an impossible window > reversed window 1`] = `[]`;
+
+exports[`repeating events > gives just the seed for a rule it cannot read, and nothing for an impossible window > unknown zone 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-06T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > gives just the seed for a rule it cannot read, and nothing for an impossible window > unsupported frequency 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > gives just the seed for a rule it cannot read, and nothing for an impossible window > with the prefix 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-06T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > keeps the wall-clock time across a change of clocks, in the seed's zone > Berlin in October 1`] = `
+[
+  "2026-10-24T07:00:00.000Z",
+  "2026-10-25T08:00:00.000Z",
+  "2026-10-26T08:00:00.000Z",
+  "2026-10-27T08:00:00.000Z",
+  "2026-10-28T08:00:00.000Z",
+]
+`;
+
+exports[`repeating events > keeps the wall-clock time across a change of clocks, in the seed's zone > New York in March 1`] = `
+[
+  "2026-03-05T14:00:00.000Z",
+  "2026-03-06T14:00:00.000Z",
+  "2026-03-07T14:00:00.000Z",
+  "2026-03-08T13:00:00.000Z",
+  "2026-03-09T13:00:00.000Z",
+  "2026-03-10T13:00:00.000Z",
+  "2026-03-11T13:00:00.000Z",
+  "2026-03-12T13:00:00.000Z",
+]
+`;
+
+exports[`repeating events > keeps the wall-clock time across a change of clocks, in the seed's zone > Sydney 1`] = `
+[
+  "2026-02-28T13:30:00.000Z",
+  "2026-03-07T13:30:00.000Z",
+  "2026-03-14T13:30:00.000Z",
+]
+`;
+
+exports[`repeating events > leaves out skipped dates, and honours the window and the limit > exdate 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-06T09:00:00.000Z",
+  "2026-01-08T09:00:00.000Z",
+  "2026-01-09T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > leaves out skipped dates, and honours the window and the limit > limit 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-06T09:00:00.000Z",
+  "2026-01-07T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > leaves out skipped dates, and honours the window and the limit > limit of zero is one 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > leaves out skipped dates, and honours the window and the limit > long ago 1`] = `
+[
+  "2026-01-01T09:00:00.000Z",
+  "2026-01-02T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > leaves out skipped dates, and honours the window and the limit > monthly long ago 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-02-02T09:00:00.000Z",
+  "2026-03-02T09:00:00.000Z",
+  "2026-04-06T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > leaves out skipped dates, and honours the window and the limit > weekly long ago 1`] = `
+[
+  "2026-01-01T09:00:00.000Z",
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-08T09:00:00.000Z",
+  "2026-01-12T09:00:00.000Z",
+  "2026-01-15T09:00:00.000Z",
+  "2026-01-19T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > leaves out skipped dates, and honours the window and the limit > window 1`] = `
+[
+  "2026-02-10T09:00:00.000Z",
+  "2026-02-11T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > leaves out skipped dates, and honours the window and the limit > window with a count 1`] = `
+[
+  "2026-02-10T09:00:00.000Z",
+  "2026-02-11T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > leaves out skipped dates, and honours the window and the limit > yearly long ago 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2027-01-05T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats daily, with an interval, a count and an end > by day 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-09T09:00:00.000Z",
+  "2026-01-12T09:00:00.000Z",
+  "2026-01-16T09:00:00.000Z",
+  "2026-01-19T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats daily, with an interval, a count and an end > by month and day 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-02-01T09:00:00.000Z",
+  "2026-02-28T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats daily, with an interval, a count and an end > count 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-06T09:00:00.000Z",
+  "2026-01-07T09:00:00.000Z",
+  "2026-01-08T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats daily, with an interval, a count and an end > interval 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-15T09:00:00.000Z",
+  "2026-01-25T09:00:00.000Z",
+  "2026-02-04T09:00:00.000Z",
+  "2026-02-14T09:00:00.000Z",
+  "2026-02-24T09:00:00.000Z",
+  "2026-03-06T09:00:00.000Z",
+  "2026-03-16T09:00:00.000Z",
+  "2026-03-26T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats daily, with an interval, a count and an end > until 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-06T09:00:00.000Z",
+  "2026-01-07T09:00:00.000Z",
+  "2026-01-08T09:00:00.000Z",
+  "2026-01-09T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats daily, with an interval, a count and an end > until a date 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-06T09:00:00.000Z",
+  "2026-01-07T09:00:00.000Z",
+  "2026-01-08T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats monthly by day of month, by weekday, and by position > a Monday the 13th 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-04-13T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats monthly by day of month, by weekday, and by position > every other month 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-03-05T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats monthly by day of month, by weekday, and by position > fifth Monday 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-03-30T09:00:00.000Z",
+  "2026-06-29T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats monthly by day of month, by weekday, and by position > last Friday 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-30T09:00:00.000Z",
+  "2026-02-27T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats monthly by day of month, by weekday, and by position > last day 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-31T09:00:00.000Z",
+  "2026-02-28T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats monthly by day of month, by weekday, and by position > last weekday 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-30T09:00:00.000Z",
+  "2026-02-27T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats monthly by day of month, by weekday, and by position > second Tuesday 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-13T09:00:00.000Z",
+  "2026-02-10T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats monthly by day of month, by weekday, and by position > the 31st skips short months 1`] = `
+[
+  "2026-01-31T09:00:00.000Z",
+  "2026-03-31T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats monthly by day of month, by weekday, and by position > two days 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-15T09:00:00.000Z",
+  "2026-02-01T09:00:00.000Z",
+  "2026-02-15T09:00:00.000Z",
+  "2026-03-01T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats weekly on several days, and counts weeks from the chosen week start > fortnightly, Monday start 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-11T09:00:00.000Z",
+  "2026-01-19T09:00:00.000Z",
+  "2026-01-25T09:00:00.000Z",
+  "2026-02-02T09:00:00.000Z",
+  "2026-02-08T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats weekly on several days, and counts weeks from the chosen week start > fortnightly, Sunday start 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-18T09:00:00.000Z",
+  "2026-01-19T09:00:00.000Z",
+  "2026-02-01T09:00:00.000Z",
+  "2026-02-02T09:00:00.000Z",
+  "2026-02-15T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats weekly on several days, and counts weeks from the chosen week start > in one month 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-02-02T09:00:00.000Z",
+  "2026-02-09T09:00:00.000Z",
+  "2026-02-16T09:00:00.000Z",
+  "2026-02-23T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats weekly on several days, and counts weeks from the chosen week start > the seed's weekday 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-12T09:00:00.000Z",
+  "2026-01-19T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats weekly on several days, and counts weeks from the chosen week start > three days 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-01-07T09:00:00.000Z",
+  "2026-01-09T09:00:00.000Z",
+  "2026-01-12T09:00:00.000Z",
+  "2026-01-14T09:00:00.000Z",
+  "2026-01-16T09:00:00.000Z",
+  "2026-01-19T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats yearly, in a month, by weekday of the year, and on a leap day > 20th Monday 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-05-18T09:00:00.000Z",
+  "2027-05-17T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats yearly, in a month, by weekday of the year, and on a leap day > Thanksgiving 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-11-26T09:00:00.000Z",
+  "2027-11-25T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats yearly, in a month, by weekday of the year, and on a leap day > a Monday the 1st 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-06-01T09:00:00.000Z",
+  "2027-02-01T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats yearly, in a month, by weekday of the year, and on a leap day > every third year 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2029-01-05T09:00:00.000Z",
+  "2032-01-05T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats yearly, in a month, by weekday of the year, and on a leap day > leap day 1`] = `
+[
+  "2028-02-29T09:00:00.000Z",
+  "2032-02-29T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats yearly, in a month, by weekday of the year, and on a leap day > same day 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2027-01-05T09:00:00.000Z",
+  "2028-01-05T09:00:00.000Z",
+]
+`;
+
+exports[`repeating events > repeats yearly, in a month, by weekday of the year, and on a leap day > two months 1`] = `
+[
+  "2026-01-05T09:00:00.000Z",
+  "2026-03-05T09:00:00.000Z",
+  "2026-06-05T09:00:00.000Z",
+  "2027-03-05T09:00:00.000Z",
+]
+`;
+
+exports[`the meeting link > takes it from the calendar's own field first, then from the text > description 1`] = `"https://zoom.us/j/123456789?pwd=a"`;
+
+exports[`the meeting link > takes it from the calendar's own field first, then from the text > google 1`] = `"https://meet.google.com/abc-defg-hij"`;
+
+exports[`the meeting link > takes it from the calendar's own field first, then from the text > location 1`] = `"https://teams.microsoft.com/l/meetup-join/abc"`;
+
+exports[`the meeting link > takes it from the calendar's own field first, then from the text > microsoft 1`] = `"https://teams.microsoft.com/l/meetup-join/xyz"`;
+
+exports[`the meeting link > takes it from the calendar's own field first, then from the text > url 1`] = `"https://meet.google.com/xxx-yyyy-zzz"`;
+
+exports[`what kind of event it is > makes an id from the start and summary when there is none, and reads the URL 1`] = `
+[
+  [
+    "1767603600000-No id here",
+    "https://example.org/e/1",
+  ],
+]
+`;
+
+exports[`what kind of event it is > reads a recurrence rule, the occurrences skipped, and which occurrence an event replaces > all-day 1`] = `"2026-01-26"`;
+
+exports[`what kind of event it is > reads a recurrence rule, the occurrences skipped, and which occurrence an event replaces > all-day exdate 1`] = `
+[
+  {
+    "allDay": true,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": "2026-01-05",
+    "endsAt": 1767657600000,
+    "exdates": [
+      "2026-01-06",
+    ],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": "2026-01-05",
+    "startsAt": 1767571200000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`what kind of event it is > reads a recurrence rule, the occurrences skipped, and which occurrence an event replaces > series 1`] = `
+[
+  {
+    "allDay": false,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": null,
+    "endsAt": 1767607200000,
+    "exdates": [
+      "2026-01-12",
+      "2026-01-19",
+    ],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": "FREQ=WEEKLY;BYDAY=MO",
+    "sequence": 0,
+    "startDate": null,
+    "startsAt": 1767603600000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`what kind of event it is > reads a recurrence rule, the occurrences skipped, and which occurrence an event replaces > timed 1`] = `"2026-01-26"`;
+
+exports[`what kind of event it is > reads status, busy or free, sequence, and the dates it was changed > CANCELLED 1`] = `"cancelled"`;
+
+exports[`what kind of event it is > reads status, busy or free, sequence, and the dates it was changed > CONFIRMED 1`] = `"confirmed"`;
+
+exports[`what kind of event it is > reads status, busy or free, sequence, and the dates it was changed > TENTATIVE 1`] = `"tentative"`;
+
+exports[`what kind of event it is > reads status, busy or free, sequence, and the dates it was changed > WEIRD 1`] = `"confirmed"`;
+
+exports[`what kind of event it is > reads status, busy or free, sequence, and the dates it was changed > modified 1`] = `
+[
+  [
+    7,
+    1767323045000,
+  ],
+]
+`;
+
+exports[`what kind of event it is > reads status, busy or free, sequence, and the dates it was changed > stamp only 1`] = `
+[
+  [
+    0,
+    1735689600000,
+  ],
+]
+`;
+
+exports[`when an event starts and ends > falls back to a duration, then to an hour, and never ends before it starts > bad duration 1`] = `
+[
+  {
+    "allDay": false,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": null,
+    "endsAt": 1767607200000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": null,
+    "startsAt": 1767603600000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > falls back to a duration, then to an hour, and never ends before it starts > bad end 1`] = `
+[
+  {
+    "allDay": false,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": null,
+    "endsAt": 1767607200000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": null,
+    "startsAt": 1767603600000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > falls back to a duration, then to an hour, and never ends before it starts > day and hours 1`] = `
+[
+  {
+    "allDay": false,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": null,
+    "endsAt": 1767697200000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": null,
+    "startsAt": 1767603600000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > falls back to a duration, then to an hour, and never ends before it starts > duration 1`] = `
+[
+  {
+    "allDay": false,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": null,
+    "endsAt": 1767609000000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": null,
+    "startsAt": 1767603600000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > falls back to a duration, then to an hour, and never ends before it starts > end before start 1`] = `
+[
+  {
+    "allDay": false,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": null,
+    "endsAt": 1767607200000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": null,
+    "startsAt": 1767603600000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > falls back to a duration, then to an hour, and never ends before it starts > negative duration 1`] = `
+[
+  {
+    "allDay": false,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": null,
+    "endsAt": 1767603600000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": null,
+    "startsAt": 1767603600000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > falls back to a duration, then to an hour, and never ends before it starts > nothing 1`] = `
+[
+  {
+    "allDay": false,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": null,
+    "endsAt": 1767607200000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": null,
+    "startsAt": 1767603600000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > reads UTC, zoned and floating times > across the clocks changing 1`] = `
+[
+  {
+    "allDay": false,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": null,
+    "endsAt": 1772955000000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": null,
+    "startsAt": 1772951400000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "America/New_York",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > reads UTC, zoned and floating times > floating 1`] = `
+[
+  {
+    "allDay": false,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": null,
+    "endsAt": 1767607200000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": null,
+    "startsAt": 1767603600000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > reads UTC, zoned and floating times > unknown zone 1`] = `
+[
+  {
+    "allDay": false,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": null,
+    "endsAt": 1767607200000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": null,
+    "startsAt": 1767603600000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > reads UTC, zoned and floating times > utc 1`] = `
+[
+  {
+    "allDay": false,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": null,
+    "endsAt": 1767607200000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": null,
+    "startsAt": 1767603600000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > reads UTC, zoned and floating times > zoned 1`] = `
+[
+  {
+    "allDay": false,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": null,
+    "endsAt": 1767627000000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": null,
+    "startsAt": 1767621600000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "America/New_York",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > reads all-day events, whose end is the day after the last > bad end 1`] = `
+[
+  {
+    "allDay": true,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": "2026-01-15",
+    "endsAt": 1768521600000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": "2026-01-15",
+    "startsAt": 1768435200000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > reads all-day events, whose end is the day after the last > duration days 1`] = `
+[
+  {
+    "allDay": true,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": "2026-01-17",
+    "endsAt": 1768694400000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": "2026-01-15",
+    "startsAt": 1768435200000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > reads all-day events, whose end is the day after the last > end before start 1`] = `
+[
+  {
+    "allDay": true,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": "2026-01-15",
+    "endsAt": 1768521600000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": "2026-01-15",
+    "startsAt": 1768435200000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > reads all-day events, whose end is the day after the last > no end 1`] = `
+[
+  {
+    "allDay": true,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": "2026-01-15",
+    "endsAt": 1768521600000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": "2026-01-15",
+    "startsAt": 1768435200000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > reads all-day events, whose end is the day after the last > same-day end 1`] = `
+[
+  {
+    "allDay": true,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": "2026-01-15",
+    "endsAt": 1768435200000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": "2026-01-15",
+    "startsAt": 1768435200000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`when an event starts and ends > reads all-day events, whose end is the day after the last > two days 1`] = `
+[
+  {
+    "allDay": true,
+    "attendees": [],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": "2026-01-16",
+    "endsAt": 1768608000000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": null,
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": "2026-01-15",
+    "startsAt": 1768435200000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;
+
+exports[`who is in it > reads the organiser and the attendees, once each > not an address 1`] = `
+{
+  "email": "nothing",
+  "name": "",
+}
+`;
+
+exports[`who is in it > reads the organiser and the attendees, once each 1`] = `
+[
+  {
+    "allDay": false,
+    "attendees": [
+      {
+        "email": "sam@example.org",
+        "name": "Sam Ortiz",
+        "optional": false,
+        "rsvp": "accepted",
+      },
+      {
+        "email": "no@example.org",
+        "name": "",
+        "optional": false,
+        "rsvp": "declined",
+      },
+      {
+        "email": "maybe@example.org",
+        "name": "",
+        "optional": true,
+        "rsvp": "tentative",
+      },
+      {
+        "email": "deleg@example.org",
+        "name": "",
+        "optional": false,
+        "rsvp": "delegated",
+      },
+      {
+        "email": "weird@example.org",
+        "name": "",
+        "optional": false,
+        "rsvp": "needs-action",
+      },
+      {
+        "email": "not an address",
+        "name": "",
+        "optional": false,
+        "rsvp": "needs-action",
+      },
+    ],
+    "busy": true,
+    "conferenceUrl": "",
+    "description": "",
+    "endDate": null,
+    "endsAt": 1767607200000,
+    "exdates": [],
+    "lastModified": null,
+    "location": "",
+    "organizer": {
+      "email": "maya@chen.test",
+      "name": "Maya Chen",
+    },
+    "recurrenceId": null,
+    "reminders": [],
+    "rrule": null,
+    "sequence": 0,
+    "startDate": null,
+    "startsAt": 1767603600000,
+    "status": "confirmed",
+    "summary": "S",
+    "tzid": "UTC",
+    "uid": "u1",
+    "url": "",
+  },
+]
+`;

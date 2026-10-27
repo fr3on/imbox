@@ -1,0 +1,217 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`creating an event > a timed event with only a start gets an hour, the calendar's timezone and the defaults 1`] = `
+{
+  "all_day": false,
+  "attendees": [],
+  "busy": true,
+  "calendar_color": "#111111",
+  "calendar_id": "<id2>",
+  "calendar_name": "Cal 1",
+  "circled": false,
+  "conference_url": "",
+  "countdown": false,
+  "created_at": 0,
+  "description": "",
+  "done": false,
+  "emoji": "",
+  "end_date": null,
+  "ends_at": 1791194400000,
+  "event_id": "<id1>",
+  "id": "<id1>",
+  "kind": "event",
+  "location": "",
+  "occurrence_date": null,
+  "organizer": null,
+  "recurring": false,
+  "reminders": [],
+  "rrule": null,
+  "rsvp": "",
+  "series": false,
+  "source": "local",
+  "start_date": null,
+  "starts_at": 1791190800000,
+  "status": "confirmed",
+  "thread_id": null,
+  "timezone": "UTC",
+  "title": "Standup",
+  "updated_at": 0,
+  "url": "",
+  "writable": true,
+}
+`;
+
+exports[`deleting > one occurrence leaves a hole in the series and drops its own row 1`] = `
+[
+  {
+    "done": false,
+    "ends_at": 1791194400000,
+    "exdates": "2026-10-12,2026-10-19",
+    "master_id": null,
+    "occurrence_date": null,
+    "rrule": "FREQ=WEEKLY;BYDAY=MO",
+    "rsvp": "",
+    "starts_at": 1791190800000,
+    "title": "Weekly",
+  },
+]
+`;
+
+exports[`editing > one occurrence becomes its own row, takes the time it was moved to and leaves its slot empty 1`] = `
+[
+  {
+    "done": false,
+    "ends_at": 1791194400000,
+    "exdates": "",
+    "master_id": null,
+    "occurrence_date": null,
+    "rrule": "FREQ=WEEKLY;BYDAY=MO",
+    "rsvp": "",
+    "starts_at": 1791190800000,
+    "title": "Weekly",
+  },
+  {
+    "done": false,
+    "ends_at": 1791817200000,
+    "exdates": "",
+    "master_id": "<id1>",
+    "occurrence_date": "2026-10-12",
+    "rrule": null,
+    "rsvp": "",
+    "starts_at": 1791813600000,
+    "title": "Moved",
+  },
+]
+`;
+
+exports[`editing > this and following closes the old series just before and starts a new one here 1`] = `
+[
+  {
+    "done": false,
+    "ends_at": 1791194400000,
+    "exdates": "",
+    "master_id": null,
+    "occurrence_date": null,
+    "rrule": "FREQ=WEEKLY;BYDAY=MO;UNTIL=20261019T085959Z",
+    "rsvp": "",
+    "starts_at": 1791190800000,
+    "title": "Weekly",
+  },
+  {
+    "done": false,
+    "ends_at": 1792404000000,
+    "exdates": "",
+    "master_id": null,
+    "occurrence_date": null,
+    "rrule": "FREQ=WEEKLY;BYDAY=MO",
+    "rsvp": "",
+    "starts_at": 1792400400000,
+    "title": "From now on",
+  },
+]
+`;
+
+exports[`settings > start from the defaults, and clamp what is sent 1`] = `
+{
+  "collapse_night": true,
+  "cover_art": false,
+  "default_view": "week",
+  "night_end": 6,
+  "night_start": 22,
+  "show_declined": false,
+  "time_format": "12",
+  "timezone": "",
+  "week_start": 1,
+}
+`;
+
+exports[`the .ics export > exports an all-day event as dates 1`] = `
+"BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//inbox//Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Cal 1
+BEGIN:VEVENT
+UID:<id>@inbox
+DTSTAMP:<now>
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261007
+SUMMARY:Offsite
+X-WR-TIMEZONE:UTC
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR
+"
+`;
+
+exports[`the .ics export > exports one event with its guests and reminders 1`] = `
+"BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//inbox//Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Cal 1
+BEGIN:VEVENT
+UID:<id>@inbox
+DTSTAMP:<now>
+DTSTART:20261005T090000Z
+DTEND:20261005T100000Z
+SUMMARY:Studio / review: Q4
+DESCRIPTION:Bring cables
+LOCATION:Room 2
+URL:https://x.test/p
+X-WR-TIMEZONE:UTC
+STATUS:CONFIRMED
+SEQUENCE:0
+ATTENDEE;CN="Alex";ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mai
+ lto:a@x.test
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Studio / review: Q4
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
+"
+`;
+
+exports[`the window of days > expands a weekly repeat in the window, each occurrence with its own id and date 1`] = `
+{
+  "all_day": false,
+  "attendees": [],
+  "busy": true,
+  "calendar_color": "#111111",
+  "calendar_id": "<id2>",
+  "calendar_name": "Cal 1",
+  "circled": false,
+  "conference_url": "",
+  "countdown": false,
+  "created_at": 0,
+  "description": "",
+  "done": false,
+  "emoji": "",
+  "end_date": null,
+  "ends_at": 1791799200000,
+  "event_id": "<id1>",
+  "id": "<id1>@2026-10-12",
+  "kind": "event",
+  "location": "",
+  "occurrence_date": "2026-10-12",
+  "organizer": null,
+  "recurring": true,
+  "reminders": [],
+  "rrule": "FREQ=WEEKLY;BYDAY=MO",
+  "rsvp": "",
+  "series": false,
+  "source": "local",
+  "start_date": null,
+  "starts_at": 1791795600000,
+  "status": "confirmed",
+  "thread_id": null,
+  "timezone": "UTC",
+  "title": "Weekly",
+  "updated_at": 0,
+  "url": "",
+  "writable": true,
+}
+`;

@@ -1,0 +1,747 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`patching the thread caches before the server answers > marks threads read, moving them between the Imbox sections and counting the change 1`] = `
+[
+  [
+    [
+      "counts",
+    ],
+    {
+      "feed_new": 1,
+      "imbox_new": 4,
+      "paper_trail_new": 1,
+    },
+  ],
+  [
+    [
+      "feed",
+      "feed",
+      "new",
+    ],
+    {
+      "pageParams": [
+        0,
+      ],
+      "pages": [
+        {
+          "next_page": null,
+          "threads": [],
+        },
+      ],
+    },
+  ],
+  [
+    [
+      "imbox",
+    ],
+    {
+      "new_threads": [
+        {
+          "bucket": "imbox",
+          "id": "t2",
+          "last_message_at": 2000,
+          "reply_later": false,
+          "seen": false,
+          "set_aside": false,
+          "subject": "t2",
+          "unread": true,
+        },
+      ],
+      "reply_later": [
+        {
+          "bucket": "imbox",
+          "id": "t4",
+          "last_message_at": 4000,
+          "reply_later": true,
+          "seen": false,
+          "set_aside": false,
+          "subject": "t4",
+          "unread": true,
+        },
+      ],
+      "seen_threads": [
+        {
+          "bucket": "imbox",
+          "id": "t3",
+          "last_message_at": 3000,
+          "reply_later": false,
+          "seen": true,
+          "set_aside": false,
+          "subject": "t3",
+          "unread": false,
+        },
+        {
+          "bucket": "imbox",
+          "id": "t1",
+          "last_message_at": 1000,
+          "reply_later": false,
+          "seen": true,
+          "set_aside": false,
+          "subject": "t1",
+          "unread": false,
+        },
+      ],
+      "set_aside": [],
+    },
+  ],
+  [
+    [
+      "thread",
+      "t1",
+    ],
+    {
+      "id": "t1",
+      "messages": [
+        {
+          "id": "m1",
+          "unread": false,
+        },
+        {
+          "id": "m2",
+          "unread": false,
+        },
+      ],
+      "seen": true,
+      "unread": false,
+    },
+  ],
+  [
+    [
+      "threads",
+      "all",
+      "",
+      "",
+      "",
+    ],
+    {
+      "pageParams": [
+        0,
+      ],
+      "pages": [
+        {
+          "next_page": null,
+          "threads": [
+            {
+              "bucket": "imbox",
+              "id": "t1",
+              "last_message_at": 1000,
+              "reply_later": false,
+              "seen": true,
+              "set_aside": false,
+              "subject": "t1",
+              "unread": false,
+            },
+            {
+              "bucket": "imbox",
+              "id": "t5",
+              "last_message_at": 5000,
+              "reply_later": false,
+              "seen": false,
+              "set_aside": false,
+              "subject": "t5",
+              "unread": true,
+            },
+          ],
+        },
+      ],
+    },
+  ],
+]
+`;
+
+exports[`patching the thread caches before the server answers > marks threads unread 1`] = `
+[
+  [
+    [
+      "counts",
+    ],
+    {
+      "feed_new": 2,
+      "imbox_new": 6,
+      "paper_trail_new": 1,
+    },
+  ],
+  [
+    [
+      "feed",
+      "feed",
+      "new",
+    ],
+    {
+      "pageParams": [
+        0,
+      ],
+      "pages": [
+        {
+          "next_page": null,
+          "threads": [
+            {
+              "bucket": "feed",
+              "id": "t6",
+              "last_message_at": 6000,
+              "reply_later": false,
+              "seen": false,
+              "set_aside": false,
+              "subject": "t6",
+              "unread": true,
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  [
+    [
+      "imbox",
+    ],
+    {
+      "new_threads": [
+        {
+          "bucket": "imbox",
+          "id": "t3",
+          "last_message_at": 3000,
+          "reply_later": false,
+          "seen": false,
+          "set_aside": false,
+          "subject": "t3",
+          "unread": true,
+        },
+        {
+          "bucket": "imbox",
+          "id": "t2",
+          "last_message_at": 2000,
+          "reply_later": false,
+          "seen": false,
+          "set_aside": false,
+          "subject": "t2",
+          "unread": true,
+        },
+        {
+          "bucket": "imbox",
+          "id": "t1",
+          "last_message_at": 1000,
+          "reply_later": false,
+          "seen": false,
+          "set_aside": false,
+          "subject": "t1",
+          "unread": true,
+        },
+      ],
+      "reply_later": [
+        {
+          "bucket": "imbox",
+          "id": "t4",
+          "last_message_at": 4000,
+          "reply_later": true,
+          "seen": false,
+          "set_aside": false,
+          "subject": "t4",
+          "unread": true,
+        },
+      ],
+      "seen_threads": [],
+      "set_aside": [],
+    },
+  ],
+  [
+    [
+      "thread",
+      "t1",
+    ],
+    {
+      "id": "t1",
+      "messages": [
+        {
+          "id": "m1",
+          "unread": true,
+        },
+        {
+          "id": "m2",
+          "unread": false,
+        },
+      ],
+      "seen": false,
+      "unread": true,
+    },
+  ],
+  [
+    [
+      "threads",
+      "all",
+      "",
+      "",
+      "",
+    ],
+    {
+      "pageParams": [
+        0,
+      ],
+      "pages": [
+        {
+          "next_page": null,
+          "threads": [
+            {
+              "bucket": "imbox",
+              "id": "t1",
+              "last_message_at": 1000,
+              "reply_later": false,
+              "seen": false,
+              "set_aside": false,
+              "subject": "t1",
+              "unread": true,
+            },
+            {
+              "bucket": "imbox",
+              "id": "t5",
+              "last_message_at": 5000,
+              "reply_later": false,
+              "seen": false,
+              "set_aside": false,
+              "subject": "t5",
+              "unread": true,
+            },
+          ],
+        },
+      ],
+    },
+  ],
+]
+`;
+
+exports[`patching the thread caches before the server answers > removes threads from every list 1`] = `
+[
+  [
+    [
+      "counts",
+    ],
+    {
+      "feed_new": 2,
+      "imbox_new": 5,
+      "paper_trail_new": 1,
+    },
+  ],
+  [
+    [
+      "feed",
+      "feed",
+      "new",
+    ],
+    {
+      "pageParams": [
+        0,
+      ],
+      "pages": [
+        {
+          "next_page": null,
+          "threads": [],
+        },
+      ],
+    },
+  ],
+  [
+    [
+      "imbox",
+    ],
+    {
+      "new_threads": [
+        {
+          "bucket": "imbox",
+          "id": "t2",
+          "last_message_at": 2000,
+          "reply_later": false,
+          "seen": false,
+          "set_aside": false,
+          "subject": "t2",
+          "unread": true,
+        },
+      ],
+      "reply_later": [],
+      "seen_threads": [
+        {
+          "bucket": "imbox",
+          "id": "t3",
+          "last_message_at": 3000,
+          "reply_later": false,
+          "seen": true,
+          "set_aside": false,
+          "subject": "t3",
+          "unread": false,
+        },
+      ],
+      "set_aside": [],
+    },
+  ],
+  [
+    [
+      "thread",
+      "t1",
+    ],
+    {
+      "id": "t1",
+      "messages": [
+        {
+          "id": "m1",
+          "unread": true,
+        },
+        {
+          "id": "m2",
+          "unread": false,
+        },
+      ],
+      "seen": false,
+      "unread": true,
+    },
+  ],
+  [
+    [
+      "threads",
+      "all",
+      "",
+      "",
+      "",
+    ],
+    {
+      "pageParams": [
+        0,
+      ],
+      "pages": [
+        {
+          "next_page": null,
+          "threads": [
+            {
+              "bucket": "imbox",
+              "id": "t5",
+              "last_message_at": 5000,
+              "reply_later": false,
+              "seen": false,
+              "set_aside": false,
+              "subject": "t5",
+              "unread": true,
+            },
+          ],
+        },
+      ],
+    },
+  ],
+]
+`;
+
+exports[`query keys > are built the same way 1`] = `
+{
+  "cal": [
+    [
+      "cal",
+      "range",
+      "2026-10-01",
+      "2026-10-31",
+    ],
+    [
+      "cal",
+      "day",
+      "2026-10-03",
+    ],
+  ],
+  "collection": [
+    "collection",
+    "col1",
+  ],
+  "contact": [
+    "contact",
+    "c1",
+  ],
+  "contacts": [
+    "contacts",
+    "ann",
+  ],
+  "feed": [
+    [
+      "feed",
+      "feed",
+    ],
+    [
+      "feed",
+      "library",
+    ],
+  ],
+  "search": [
+    [
+      "search",
+      "a",
+      "best",
+      false,
+      false,
+    ],
+    [
+      "search",
+      "a",
+      "recent",
+      true,
+      true,
+    ],
+  ],
+  "static": {
+    "calSettings": [
+      "cal",
+      "settings",
+    ],
+    "calSources": [
+      "cal",
+      "sources",
+    ],
+    "clips": [
+      "clips",
+    ],
+    "collections": [
+      "collections",
+    ],
+    "counts": [
+      "counts",
+    ],
+    "dayCovers": [
+      "cal",
+      "covers",
+    ],
+    "drafts": [
+      "drafts",
+    ],
+    "extensionTokens": [
+      "extension-tokens",
+    ],
+    "files": [
+      "files",
+    ],
+    "imbox": [
+      "imbox",
+    ],
+    "labels": [
+      "labels",
+    ],
+    "me": [
+      "me",
+    ],
+    "savedSearches": [
+      "saved-searches",
+    ],
+    "screenedOut": [
+      "screened-out",
+    ],
+    "screener": [
+      "screener",
+    ],
+  },
+  "thread": [
+    [
+      "thread",
+      "t1",
+    ],
+    [
+      "thread",
+      "t1",
+      "peek",
+    ],
+  ],
+  "threads": [
+    [
+      "threads",
+      "imbox",
+      "",
+      "",
+      "",
+    ],
+    [
+      "threads",
+      "feed",
+      "q",
+      "L1",
+      "x",
+    ],
+  ],
+}
+`;
+
+exports[`the request function > sends the scope, the browser's time zone and cookies, a JSON body only when there is one, and the query string helper skips empty values 1`] = `
+[
+  [
+    "GET",
+    "/api/x",
+    {
+      "X-Account-Id": "all",
+      "X-Timezone": "Africa/Cairo",
+    },
+    undefined,
+    "include",
+  ],
+  [
+    "POST",
+    "/api/y",
+    {
+      "Content-Type": "application/json",
+      "X-Account-Id": "acc-1",
+      "X-Timezone": "Africa/Cairo",
+    },
+    "{"a":1}",
+    "include",
+  ],
+  [
+    "DELETE",
+    "/api/z",
+    {
+      "X-Account-Id": "acc-1",
+      "X-Timezone": "Africa/Cairo",
+    },
+    undefined,
+    "include",
+  ],
+]
+`;
+
+exports[`what the module exports > is the same list of values 1`] = `
+[
+  "ApiError",
+  "DOMAIN_ERRORS",
+  "STREAM_SILENCE_MS",
+  "aiChatStream",
+  "api",
+  "attachmentUrl",
+  "browserTimezone",
+  "domainErrorMessage",
+  "eventIcsUrl",
+  "getAccountId",
+  "getScope",
+  "invalidateCalendar",
+  "invalidateMail",
+  "keys",
+  "markContactReview",
+  "markThreadsSeen",
+  "qs",
+  "readRequestWithAi",
+  "removeThreadsFromLists",
+  "sendMail",
+  "serverKeepsMailFresh",
+  "storeAccountId",
+  "streamSilent",
+  "syncAccounts",
+  "useAccountMutations",
+  "useActivity",
+  "useAgent",
+  "useAgentMutations",
+  "useAiConversation",
+  "useAiConversations",
+  "useAiMemory",
+  "useAiModels",
+  "useAiMutations",
+  "useAiSettings",
+  "useAiUsage",
+  "useAutoAgentMemory",
+  "useAutoAgentMemoryMutations",
+  "useAutoAgentMutations",
+  "useAutoAgentRuns",
+  "useAutoAgents",
+  "useAutoLetInSeen",
+  "useAutoLetIns",
+  "useBrief",
+  "useBriefRefresh",
+  "useBulkAction",
+  "useBulkContactStatus",
+  "useBundle",
+  "useBundleMutations",
+  "useCalendarConnectLink",
+  "useCalendarDayMutation",
+  "useCalendarDisconnect",
+  "useCalendarRange",
+  "useCalendarSettings",
+  "useCalendarSettingsMutation",
+  "useCalendarSourceMutations",
+  "useCalendarSources",
+  "useClearActivity",
+  "useClipMutations",
+  "useClips",
+  "useCollection",
+  "useCollectionMutations",
+  "useCollections",
+  "useContact",
+  "useContactInsights",
+  "useContactReview",
+  "useContacts",
+  "useCounts",
+  "useDayCoverMutations",
+  "useDayCovers",
+  "useDigest",
+  "useDigestRefresh",
+  "useDismissImboxHint",
+  "useDomainMutations",
+  "useDomains",
+  "useDraftMutations",
+  "useDraftVacationNotices",
+  "useDrafts",
+  "useEmptyTrash",
+  "useEndVacation",
+  "useEventFromThread",
+  "useEventMutations",
+  "useExtensionTokenMutations",
+  "useExtensionTokens",
+  "useFeed",
+  "useFiles",
+  "useFillGists",
+  "useGist",
+  "useGistLine",
+  "useImapMutations",
+  "useImbox",
+  "useJev",
+  "useJevChecks",
+  "useJevMutations",
+  "useJevPhishing",
+  "useLabelMutations",
+  "useLabelThreads",
+  "useLabels",
+  "useLivePoll",
+  "useMailChanges",
+  "useMarkNotificationsSeen",
+  "useMe",
+  "useMeMutations",
+  "useNewMailNotifier",
+  "useNextThought",
+  "useNotifications",
+  "useOAuthCredentials",
+  "useOAuthMutations",
+  "usePasskeyMutations",
+  "usePasskeys",
+  "usePersonPeek",
+  "useRecentThreads",
+  "useSaveVacation",
+  "useSavedSearchMutations",
+  "useSavedSearches",
+  "useScreenedOut",
+  "useScreener",
+  "useScreenerDecide",
+  "useSearch",
+  "useSearchAnswer",
+  "useSearchOverview",
+  "useStalwartDomains",
+  "useStalwartMailboxes",
+  "useStalwartMutations",
+  "useStalwartServerMutations",
+  "useStalwartServers",
+  "useSuggest",
+  "useSystemInfo",
+  "useThoughtSet",
+  "useThoughts",
+  "useThread",
+  "useThreadAction",
+  "useThreads",
+  "useTryAgent",
+  "useTwoFactor",
+  "useTwoFactorMutations",
+  "useUndoAutoLetIn",
+  "useUpdateContact",
+  "useVacation",
+  "useWorkflowCheckup",
+  "useWorkflowMutations",
+  "useWorkflowPreview",
+  "useWorkflowRuns",
+  "useWorkflowSuggestions",
+  "useWorkflowThreadCheck",
+  "useWorkflows",
+  "whenLiveKnown",
+]
+`;

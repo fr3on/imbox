@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <script src="/theme-init.js"></script>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Imbox" />
+    <meta name="theme-color" content="#000000" />
+    <title>imbox: a calm email client on your own server</title>
+    <meta
+      name="description"
+      content="A calm, open-source email client on your own server. New senders wait in a Screener, trackers are blocked, and an AI assistant drafts with your own key."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="imbox" />
+    <meta property="og:title" content="imbox: a calm email client on your own server" />
+    <meta property="og:description" content="A calm, open-source email client on your own server. New senders wait in a Screener, trackers are blocked, and an AI assistant drafts with your own key." />
+    <meta property="og:image" content="/imbox-wide.png" />
+    <meta property="og:image:width" content="1568" />
+    <meta property="og:image:height" content="781" />
+    <meta property="og:image:alt" content="The imbox Screener and Imbox views" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="imbox: a calm email client on your own server" />
+    <meta name="twitter:description" content="A calm, open-source email client on your own server. New senders wait in a Screener, trackers are blocked, and an AI assistant drafts with your own key." />
+    <meta name="twitter:image" content="/imbox-wide.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "imbox",
+        "applicationCategory": "CommunicationApplication",
+        "operatingSystem": "Web, macOS, iOS, Android",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "license": "MIT",
+        "description": "A calm, self-hosted email client with a Screener for new senders, tracker blocking, and an assistant that uses your own model and key."
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/web/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+# Dependency updates, grouped so a week of them is a few pull requests, not thirty.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    groups:
+      # A group is one pull request, and holds minor and patch updates only. A major version (React Router 7, lucide 1) gets its own pull request, so one
+      # that needs code changes does not hold up the rest. Security updates are made apart from these and are not held back by them.
+      react:
+        patterns: ["react", "react-dom", "react-router-dom", "@tanstack/*"]
+        update-types: [minor, patch]
+      ui:
+        patterns: ["radix-ui", "lucide-react", "cmdk", "sonner", "vaul", "next-themes", "react-day-picker", "tailwindcss", "@tailwindcss/*", "tailwind-merge", "tw-animate-css", "class-variance-authority", "clsx", "@fontsource-variable/*"]
+        update-types: [minor, patch]
+      tooling:
+        dependency-type: development
+        update-types: [minor, patch]
+      production:
+        dependency-type: production
+        update-types: [minor, patch]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns: ["*"]
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: monthly

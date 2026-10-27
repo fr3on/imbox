@@ -1,0 +1,9 @@
+# Who is asked to review a change. The last matching line wins.
+*                @fr3on
+/migrations/     @fr3on
+/src/api/     @fr3on
+/server/         @fr3on
+/deploy/         @fr3on
+/.github/        @fr3on
+/.gitlab/        @fr3on
+/SECURITY.md     @fr3on

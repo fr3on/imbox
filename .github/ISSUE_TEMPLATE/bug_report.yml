@@ -1,0 +1,53 @@
+name: Bug report
+description: Something does not work as it should
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. Please do not put passwords, tokens or the text of private mail in this report. For a security problem, use a private report instead (see SECURITY.md).
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to repeat it
+      placeholder: |
+        1. Open Settings
+        2. ...
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Shown in Settings under About, or on /api/version.
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: How you run it
+      options: [Docker Compose, A Linux server with the deploy scripts, From source for development, Other]
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where it happens
+      options: [Web app on a computer, Web app on a phone, Mail sync (Gmail), Mail sync (Outlook), Mail sync (IMAP), Sending mail, Calendar, Screener or contacts, Domains and inbound mail, Search, Browser extension, Install or update, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Server log or error text
+      description: The lines around the problem, with anything private removed.
+      render: text
+    validations:
+      required: false

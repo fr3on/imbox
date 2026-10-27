@@ -1,0 +1,12 @@
+{
+  "name": "imbox-desktop",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Tauri shell for the desktop app. The window loads the user's imbox server; see imbox-website/docs/content/docs/desktop.mdx.",
+  "scripts": {
+    "tauri": "tauri"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.1"
+  }
+}

@@ -1,0 +1,37 @@
+# Security headers for every file the app serves. The Worker's own answers (/api, /auth, /agent) get theirs from src/api/security.ts, and the
+# self-hosted server reads this same file (server/run.mjs), so the two cannot drift apart.
+#
+# The policy: the app's own scripts only (no inline script, no eval); styles may be inline (React style attributes); images may come from anywhere
+# over https, because sender pictures and the images in a message are shown (a message's own frame has a stricter policy of its own, and starts
+# with remote images off); nothing but this server and the release check at api.github.com may be called; nothing may frame the app.
+# `ipc:` and `http://ipc.localhost` are the Mac and iPhone app's bridge to the shell around the page. 'wasm-unsafe-eval' lets the PDF reader decode
+# JPEG 2000 images; it does not allow eval.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; connect-src 'self' https://api.github.com ipc: http://ipc.localhost; media-src 'self' blob: data:; worker-src 'self' blob:; frame-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: no-referrer
+  Cross-Origin-Opener-Policy: same-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000
+
+# Everything under /assets/ carries a content hash in its name, so a URL can never serve
+# different bytes. Without this the Worker answers every request with max-age=0 and the
+# browser revalidates every script, stylesheet and font on every page load.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Never hold the service worker in the HTTP cache, or a future change to it can't reach an installed client.
+/sw.js
+  Cache-Control: no-cache
+
+# Same for the manifest: a change to it must be able to reach an installed client.
+/manifest.webmanifest
+  Cache-Control: no-cache
+
+# The website's apps page offers these (the extension, the Mac app): the browser saves them instead of opening them, and the page asks from
+# another address which of them exist, so they may be read from anywhere.
+/downloads/*
+  Content-Disposition: attachment
+  Cache-Control: no-cache
+  Access-Control-Allow-Origin: *

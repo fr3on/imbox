@@ -1,0 +1,26 @@
+# Replace imbox.example.com with your domain (or let setup.sh write it). Caddy gets and renews the certificate on its own.
+{$IMBOX_DOMAIN} {
+	# The event stream (/api/events) is sent as it is written, so it is not compressed.
+	@compress not path /api/events
+	encode @compress zstd gzip
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "no-referrer"
+		-Server
+	}
+	reverse_proxy 127.0.0.1:8787 {
+		# The app counts failed sign-ins per address, so it must be told the visitor's real one and nothing the visitor wrote. Caddy sets
+		# X-Forwarded-For to the address it saw; the others are headers a visitor could invent to look like somebody else.
+		header_up X-Forwarded-For {remote_host}
+		header_up -CF-Connecting-IP
+		header_up -X-Real-IP
+		header_up -True-Client-IP
+		# Send the event stream on to the browser as it comes, not in blocks.
+		flush_interval -1
+		# Long-running actions (sync, AI) can take a while.
+		transport http {
+			response_header_timeout 120s
+		}
+	}
+}

@@ -1,0 +1,18 @@
+Imbox
+Copyright (c) 2026 fr3on
+
+This product is released under the MIT License (see LICENSE).
+
+Imbox is an independent open-source project. It is not affiliated with,
+endorsed by, or sponsored by Basecamp, 37signals, or HEY. "HEY" is a
+trademark of its owner and is named in this project only to describe, for
+comparison, the kind of email workflow Imbox offers (Imbox, The Screener,
+Paper Trail and similar ideas). No code, text, images or other material from
+that service is included.
+
+Names of other products and services used in this project (Gmail, Google
+Calendar, Microsoft Outlook, Resend, Stalwart and others) belong to their
+owners and are used only to say what Imbox works with.
+
+Third-party software included in or used by Imbox is covered by its own
+licences; see package-lock.json for the list of npm packages.
