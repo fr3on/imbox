@@ -1,13 +1,10 @@
-# Builds the desktop app (apps/desktop) on Windows, Linux and macOS when it changes, so a change that only compiles on one system is caught
-# in the pull request. The files it makes are kept for a week as workflow artifacts; a release builds them again (see release.yml).
+# Builds the desktop app (apps/desktop) on Windows, Linux and macOS for a new version tag (vX.Y.Z), or by hand from the Actions tab.
+# The files it makes are kept for a week as workflow artifacts; a release builds them again (see release.yml).
 name: Desktop
 
 on:
-  pull_request:
-    paths: ["apps/desktop/**", ".github/workflows/desktop.yml"]
   push:
-    branches: [main]
-    paths: ["apps/desktop/**", ".github/workflows/desktop.yml"]
+    tags: ["v[0-9]+.[0-9]+.[0-9]+*"]
   workflow_dispatch:
 
 permissions:
