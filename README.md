@@ -6,12 +6,10 @@ Imbox reads your Gmail, your Outlook and any other mailbox, and puts all of it b
 
 You run it yourself, on a small Linux server. It has one owner, a black-and-white design, and a separate layout for phones that you add to your home screen.
 
-[![CI][gh-badge]][gh-ci] [![Pipeline][pipeline-badge]][pipeline] [![Docker][docker-badge]][docker] [![License: MIT][license-badge]][license] ![Node 22+][node-badge] ![PostgreSQL 16][pg-badge]
+[![CI][gh-badge]][gh-ci] [![Docker][docker-badge]][docker] [![License: MIT][license-badge]][license] ![Node 22+][node-badge] ![PostgreSQL 16][pg-badge]
 
 [gh-badge]: https://github.com/fr3on/imbox/actions/workflows/ci.yml/badge.svg
 [gh-ci]: https://github.com/fr3on/imbox/actions/workflows/ci.yml
-[pipeline-badge]: https://git.0x200.com/fr3on/imbox/badges/main/pipeline.svg
-[pipeline]: https://git.0x200.com/fr3on/imbox/-/pipelines
 [docker-badge]: https://img.shields.io/badge/docker-fr3on%2Fimbox-black?logo=docker&logoColor=white
 [docker]: https://hub.docker.com/r/fr3on/imbox
 [license-badge]: https://img.shields.io/badge/license-MIT-black
